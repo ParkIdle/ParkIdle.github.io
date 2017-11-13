@@ -13,16 +13,12 @@
     <a href="whoweare" color="green">Who we are</a>
     <a href="#contactus">Contact us</a>
 </nav>
-<!--Slide Show -->
-<section onclick="carousel">
-    <img class="homeSlides" src="slide_1.png" style="width:100%" />
-    <img class="homeSlides" src="slide_2.jpg" style="width:100%" />
-    <img class="homeSlides" src="slide_3.png" style="width:100%" />
-</section>
+<section ID="tabellaImmagini">
 
-<section onLoad="tabellaPresentazione">
-  <img class="ImmaginiPresentazione" src="res/alessio.jpg" width="15%"
-   onscroll="nextAndrea" onmouseover="res/alessio2.jpg"
+  <img ID="AlessioImmagine" class="immaginePresentazione"
+     src="res/alessio.jpg" width="15%"
+     onscroll="nextAndrea" onmouseover="CambioAlessio(this)"
+     onmouseout="BackAlessio(this)">
 </section>
 
 <script>
@@ -30,10 +26,12 @@
   var myIndex = 0;
   tabellaPresentazione();
 
-  function tabellaPresentazione(){
+  function CambioAlessio(x){
+    x.src = "res/alessio2.jpg";
+  }
 
-  var x = document.getElementsByClassName("ImmaginiPresentazione");
-  x[0].style.display = "block";
+  function BackAlessio(x){
+    x.src = "res/alessio.jpg";
   }
 
   </script>
