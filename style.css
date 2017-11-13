@@ -33,10 +33,10 @@
 }
 
 body {
-  background-color: black;
-  background-image: url("res/background.jpg");
+  background-color: white;
+  background-image: url("res/smartcity.png");
 }
 
 .contactus {
-    color: white;
+    color: blue;
 }
