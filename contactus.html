@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<body>
+    <nav class="topNav" id="myTopNav">
+        <a href="#home">Home</a>
+        <a href="whoweare.html">Who we are</a>
+        <a href="#contactus">Contact us</a>
+    </nav>
+    <form class="contactus" action="">
+        <label for="name">Name*:</label>
+        <input type="text" name="name" id="name" size="25" required />
+        <br />
+        <label for="surname">Surname*:</label>
+        <input type="text" name="surname" id="surname" size="25" required />
+        <br />
+        <label for="email">Email*:</label>
+        <input type="text" name="email" id="email" size="25" required />
+        <br />
+        <label for="category">Category:</label>
+        <select name="categories" id="categories">
+            <option value="student">Student</option>
+            <option value="enterprise">Enterprise</option>
+            <option value="public institution">Public institution</option>
+            <option value="developer">Developer</option>
+        </select>
+        </br>
+        <label for="organization">Organization:</label>
+        <input type="text" name="organization" id="organization" placeholder="(optional)"/>
+        <br />
+        <label for="message">Message*:</label>
+        <br />
+        <textarea name="message" placeholder="Write any request here..." rows="20" cols="50"/></textarea>
+        <br />
+        <input type="submit" name="Submit" value="submit" onsubmit="" />
+        (Fields with '*' are required!)
+    </form>
+</body>
+</html>
