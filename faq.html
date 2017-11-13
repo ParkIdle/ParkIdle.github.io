@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <script type="text/javascript">
+  function rendiVisibile(nome){
+    if(document.getElementById(nome).style.visibility=="collapse"){
+        document.getElementById(nome).style.display="block";
+      document.getElementById(nome).style.visibility="visible";
+    }
+
+    else{ document.getElementById(nome).style.visibility="collapse";
+      document.getElementById(nome).style.display="none";
+    }
+  }
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +24,16 @@
     <a href="contactus.html">Contact us</a>
     <a href="faq.html"> F.A.Q. </a>
 </nav>
+<h1 style="color:blue; font-size:350%; text-align:center;"> F.A.Q. </h1>
+
+<a href="#" onclick="rendiVisibile('domanda')">Domanda 1 </a>
+<div id="domanda" style="visibility:collapse; display:none;" > Sei stronzo?</div>
+<br>
+
+<a href="#" onclick="rendiVisibile('domanda2')">Domanda 2 </a>
+<div id="domanda2" style="visibility:collapse; display:none;"> Sei stronzo?</div>
+<br>
+
 <!--Slide Show -->
 <section onclick="carousel">
     <img class="homeSlides" src="slide_1.png" style="width:100%" />
