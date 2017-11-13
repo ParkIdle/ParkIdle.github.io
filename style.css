@@ -28,10 +28,10 @@
 }
 
 body {
-  background-color: black;
+  background-color: white;
   background-image: url("res/smartcity.png");
 }
 
 .contactus {
-    color: white;
+    color: blue;
 }
