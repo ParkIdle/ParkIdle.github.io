@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<body>
+<!-- Content will go here -->
+<!-- Navigation -->
+<nav class="topNav" id="myTopNav">
+    <a href="#home">Home</a>
+    <a href="#whoweare">Who we are</a>
+    <a href="#contactus">Contact us</a>
+</nav>
+<!--Slide Show -->
+<section onclick="carousel">
+    <img class="homeSlides" src="slide_1.png" style="width:100%" />
+    <img class="homeSlides" src="slide_2.jpg" style="width:100%" />
+    <img class="homeSlides" src="slide_3.png" style="width:100%" />
+</section>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("homeSlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+
+</nav>
+</body>
+</html>
