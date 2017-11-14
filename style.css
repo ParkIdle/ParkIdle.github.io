@@ -1,26 +1,35 @@
 .topNav {
-    background-color: blue;
-    overflow: hidden;
+    background-color: grey;
+    text-shadow: 2px 2px black;
+    overflow:hidden;;
+    color: white;
     border-radius: 10px;
-    opacity: 0.8;
-}
+    opacity: 0.3;
 
+}
+.menu{
+  opacity: 1;
+
+}
 .topNav a {
     float: left;
     display:flow-root;
     color: white;
+
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17;
+    font-size: 18px;
 }
 
 .topNav a:hover {
-    background-color: white;
-    color: red;
-    opacity: 0.5;
+    background-color: black;
+    color:white;
+
+    opacity: 1;
     border-radius: 5px;
 }
+
 .faq{
   text-shadow: 2px 2px black;
 
@@ -40,7 +49,6 @@ body {
   background-color: white;
   background-image: url("res/blurry-city-lights.webp");
   background-attachment: fixed;
-  background-repeat:no-repeat;
   background-size: cover;
   scroll-behavior: auto;
 }
@@ -48,6 +56,7 @@ body {
 .domande{
   text-shadow: text-shadow: 2px 2px black;
   color: white;
+
 
 }
 
