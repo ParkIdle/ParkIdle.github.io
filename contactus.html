@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html>
+<script>
+function sendEmail(){
+    var name = document.getElementById("name");
+    var surname = document.getElementById("surname");
+    var email = document.getElementById("email");
+    var organization = document.getElementById("organization");
+    var message = document.getElementById("message");
+}
+</script>
 <link rel="stylesheet" href="style.css">
 <body>
     <nav class="topNav" id="myTopNav">
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="whoweare.html">Who we are</a>
         <a href="contactus.html">Contact us</a>
+        <a href="faq.html"> F.A.Q. </a>
     </nav>
     <form class="contactus" action="">
-        <label for="name">Name*:</label>
-        <input type="text" name="name" id="name" size="25" required />
-        <br />
-        <label for="surname">Surname*:</label>
-        <input type="text" name="surname" id="surname" size="25" required />
-        <br />
-        <label for="email">Email*:</label>
-        <input type="text" name="email" id="email" size="25" required />
-        <br />
-        <label for="category">Category:</label>
-        <select name="categories" id="categories">
-            <option value="student">Student</option>
-            <option value="enterprise">Enterprise</option>
-            <option value="public institution">Public institution</option>
-            <option value="developer">Developer</option>
-        </select>
-        </br>
-        <label for="organization">Organization:</label>
-        <input type="text" name="organization" id="organization" placeholder="(optional)"/>
-        <br />
-        <label for="message">Message*:</label>
-        <br />
-        <textarea name="message" placeholder="Write any request here..." rows="20" cols="50"/></textarea>
-        <br />
-        <input type="submit" name="Submit" value="submit" onsubmit="" />
-        (Fields with '*' are required!)
+        <table>
+            <tr><td>Name*:</td>
+            <td><input type="text" name="name" id="name" size="25" required />
+            </td></tr>
+            <tr><td>Surname*:</td>
+            <td><input type="text" name="surname" id="surname" size="25" required />
+            </td></tr>
+            <tr><td>Email*:</td>
+            <td><input type="text" name="email" id="email" size="25" required />
+            </td></tr>
+            <tr><td>Category:</td><td>
+                <select name="categories" id="categories" required>
+                    <option></option>
+                    <option value="student">Student</option>
+                    <option value="enterprise">Enterprise</option>
+                    <option value="public institution">Public institution</option>
+                    <option value="developer">Developer</option>
+                </select>
+            </td></tr>
+            <tr><td>Organization:</td>
+            <td><input type="text" name="organization" id="organization" size="25"placeholder="(optional)"/>
+            </td></tr>
+            <tr><td>Message*:</td>
+            <td>
+                <textarea name="message" placeholder="Write any request here..." rows="20" cols="50"/></textarea>
+            </td>
+            <tr><td><input type="submit" name="Submit" value="Submit" onsubmit="" /></td>
+            <td>
+                (Fields with '*' are required!)
+            </td></tr>
+        </table>
     </form>
 </body>
 </html>
