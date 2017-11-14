@@ -38,6 +38,35 @@
   border-radius: 10px;
   position: sticky;
 }
+@keyframes example {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.logo{
+  position: absolute;
+  top: 550px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
 
 /*@@@@ F.A.Q @@@@*/
 .faq{
@@ -45,8 +74,10 @@
 }
 
 .domande{
-    text-shadow: text-shadow: 2px 2px black;
-    color: white;
+  background: rgba(217, 217, 217,0.5);
+  border-radius: 100px;
+  padding: 20px;
+  opacity: 0,8;
 }
 
 /*@@@@ BODY @@@@*/
