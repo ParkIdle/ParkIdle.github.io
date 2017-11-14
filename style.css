@@ -39,19 +39,22 @@
 body {
   background-color: white;
   background-image: url("res/blurry-city-lights.webp");
-  background-attachment: scroll;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
   background-size: cover;
+  scroll-behavior: auto;
 }
 
 .domande{
   text-shadow: text-shadow: 2px 2px black;
   color: white;
-  shape;
 
 }
 
 .contactus {
-    align-self: center;
+    text-shadow: 2px 2px black;
+    font-weight: bolder;
+    text-align: left;
     color: white;
     font-size: 15;
     text-decoration-style: solid;
