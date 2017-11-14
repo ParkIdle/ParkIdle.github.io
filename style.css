@@ -21,6 +21,10 @@
     opacity: 0.5;
     border-radius: 5px;
 }
+.faq{
+  text-shadow: 2px 2px black;
+
+}
 
 .tabellaImmagini {
   transition-property: none;
@@ -34,7 +38,16 @@
 
 body {
   background-color: white;
-  background-image: url("res/smartcity.png");
+  background-image: url("res/blurry-city-lights.webp");
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.domande{
+  text-shadow: text-shadow: 2px 2px black;
+  color: white;
+  shape;
+
 }
 
 .contactus {
