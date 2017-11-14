@@ -39,5 +39,7 @@ body {
 
 .contactus {
     align-self: center;
-    color: blue;
+    color: white;
+    font-size: 15;
+    text-decoration-style: solid;
 }
