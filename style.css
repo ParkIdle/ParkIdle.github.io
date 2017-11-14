@@ -1,24 +1,16 @@
 /*@@@@ NAVBAR @@@@*/
 .topNav {
-<<<<<<< HEAD
     background: rgba(204, 204, 204, 0.5);
     margin: 0 0 1em 0;
     padding: 0;
     border-bottom: 2px solid rgba(126, 159, 176,0.4);
     overflow:hidden;
     width: 100%;
-=======
-    background-color: blue;
-    overflow: hidden;
-    border-radius: 10px;
-    opacity: 0.8;
->>>>>>> f0498ecd3f3cbae6e1732013673e2df89d1416a8
 }
 
 .topNav a {
     float: left;
     display:flow-root;
-<<<<<<< HEAD
     font-family:sans-serif;
     text-decoration: none;
     color: rgb(126, 159, 176);
@@ -27,13 +19,17 @@
     padding: 14px 16px;
     font-size: 18px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
-=======
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17;
->>>>>>> f0498ecd3f3cbae6e1732013673e2df89d1416a8
+}
+
+.topNav a:hover {
+    background: rgba(114, 224, 58,0.5);
+    color: rgb(126, 159, 176);
+    opacity: 0,8;
+}
+
+.topNav a.active {
+    background-color: yellow;
+    color: purple;
 }
 
 .immaginePresentazione {
@@ -42,34 +38,7 @@
   border-radius: 10px;
   position: sticky;
 }
-.topNav a:hover {
-<<<<<<< HEAD
-    background: rgba(114, 224, 58,0.5);
-    color: rgb(126, 159, 176);
-    opacity: 0,8;
-=======
-    background-color: white;
-    color: red;
-    opacity: 0.5;
-    border-radius: 5px;
-}
-.faq{
-  text-shadow: 2px 2px black;
 
-}
-
-.tabellaImmagini {
-  transition-property: none;
-  transition-duration: 2s;
->>>>>>> f0498ecd3f3cbae6e1732013673e2df89d1416a8
-}
-
-.topNav a.active {
-    background-color: yellow;
-    color: purple;
-}
-
-<<<<<<< HEAD
 /*@@@@ F.A.Q @@@@*/
 .faq{
     text-shadow: 2px 2px black;
@@ -89,25 +58,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
     scroll-behavior: auto;
-=======
-body {
-  font-family: Helvetica,Tahoma;
-  background-color: white;
-  background-image: url("res/smartcityAlt.png");
-  position: sticky;
-  width: auto;
-  height: auto;
-  background-image: url("res/blurry-city-lights.webp");
-  background-attachment: fixed;
-  background-repeat:no-repeat;
-  background-size: cover;
-  scroll-behavior: auto;
-}
-
-.domande{
-  text-shadow: text-shadow: 2px 2px black;
-  color: white;
->>>>>>> f0498ecd3f3cbae6e1732013673e2df89d1416a8
 }
 
 /*@@@@ CONTACT US @@@@*/
@@ -127,7 +77,6 @@ body {
     font-size: 15;
     text-decoration-style: solid;
 }
-<<<<<<< HEAD
 .contactdesc {
     font-size: 20px;
     float:left;
@@ -144,38 +93,4 @@ body {
 /*@@@@ INDEX @@@@*/
 .logo {
     text-align: center;
-=======
-
-
-
-.aos-all {
-  width: 1000px;
-  max-width: 98%;
-  margin: 10vh auto 0 auto;
-}
-
-.aos-item {
-  display: inline-block;
-  float: left;
-  width: 33.3333%;
-  height: 300px;
-  padding: 20px;
-}
-
-.aos-item__inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  float: left;
-  background: #1da4e2;
-  line-height: 260px;
-  text-align: center;
-  color: #fff;
-}
-
-@media screen and (max-width: 800px) {
-  .aos-item {
-    width: 50%;
-  }
->>>>>>> f0498ecd3f3cbae6e1732013673e2df89d1416a8
 }
