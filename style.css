@@ -1,25 +1,18 @@
 .topNav {
-    background-color: grey;
-    text-shadow: 2px 2px black;
-    overflow:hidden;;
-    color: white;
+    background-color: blue;
+    overflow: hidden;
     border-radius: 10px;
-    opacity: 0.3;
-
+    opacity: 0.8;
 }
-.menu{
-  opacity: 1;
 
-}
 .topNav a {
     float: left;
     display:flow-root;
     color: white;
-
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17;
 }
 
 .immaginePresentazione {
@@ -29,15 +22,17 @@
   position: sticky;
 }
 .topNav a:hover {
-    background-color: black;
-    color:white;
-
-    opacity: 1;
+    background-color: white;
+    color: red;
+    opacity: 0.5;
     border-radius: 5px;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 8ddf4e5... merge
 .faq{
   text-shadow: 2px 2px black;
 
@@ -65,6 +60,7 @@ body {
 =======
   background-image: url("res/blurry-city-lights.webp");
   background-attachment: fixed;
+  background-repeat:no-repeat;
   background-size: cover;
   scroll-behavior: auto;
 }
@@ -73,8 +69,11 @@ body {
   text-shadow: text-shadow: 2px 2px black;
   color: white;
 
+<<<<<<< HEAD
 
 >>>>>>> 8ddf4e5e1249d194f156fb438bb8502379bbe400
+=======
+>>>>>>> parent of 8ddf4e5... merge
 }
 
 .contactus {
