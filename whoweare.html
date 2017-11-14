@@ -3,39 +3,53 @@
 <script type="text/javascript">
 </script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="dev/aos-master/css/styles.css" />
+<link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
 <body>
 <!-- Content will go here -->
 <!-- Navigation -->
-<nav class="topNav" id="myTopNav">
-    <a href="#home">Home</a>
-    <a href="whoweare" color="green">Who we are</a>
-    <a href="#contactus">Contact us</a>
+      <nav class="topNav" id="myTopNav">
+        <a href="index.html">Home</a>
+        <a href="#" color="green">Who we are</a>
+        <a href="contactus.html">Contact us</a>
+        <a href="faq.html">F.A.Q.</a>
 </nav>
-<section ID="tabellaImmagini">
 
-  <img ID="AlessioImmagine" class="immaginePresentazione"
-     src="res/alessio.jpg" width="15%"
-     onscroll="nextAndrea" onmouseover="CambioAlessio(this)"
-     onmouseout="BackAlessio(this)">
-</section>
+<div id="transcroller-body" class="aos-all">
 
+  <div class="aos-item" data-aos="fade-up">
+    <div class="aos-item__inner"><h3>Alessio, 21, Roma.</h3></div>
+
+  <div class="aos-item" data-aos="fade-up">
+    <div class="aos-item__inner"><h3>
+      <img id="AlessioImmagine"
+         class="immaginePresentazione"
+         src="res/alessio.jpg"
+         width="15%"
+         onscroll="nextAndrea"
+         onmouseover="CambioAlessio(this)"
+         onmouseout="BackAlessio(this)"
+         ></h3></div>
+</div>
+
+<script src="dev/aos-master/dist/aos.js"></script>
 <script>
-
+  AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+</script>
+<script>
   var myIndex = 0;
   tabellaPresentazione();
-
   function CambioAlessio(x){
     x.src = "res/alessio2.jpg";
   }
-
   function BackAlessio(x){
     x.src = "res/alessio.jpg";
   }
 
   </script>
-
 </nav>
 </body>
 </html>
