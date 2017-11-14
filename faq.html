@@ -19,17 +19,10 @@
 <!-- Content will go here -->
 <!-- Navigation -->
 <nav class="topNav" id="myTopNav">
-<<<<<<< HEAD
-      <a href="index.html">Home</a>
-      <a href="whoweare.html">Who we are</a>
-      <a href="contactus.html">Contact us</a>
-      <a href="faq.html"> F.A.Q. </a>
-=======
     <a href="index.html">Home</a>
     <a href="whoweare.html">Who we are</a>
     <a href="contactus.html">Contact us</a>
     <a href="faq.html"> F.A.Q. </a>
->>>>>>> f0498ecd3f3cbae6e1732013673e2df89d1416a8
 </nav>
 <h1  class= "faq" style="color:white; font-size:350%; text-align:center;"> F.A.Q. </h1>
 
@@ -42,28 +35,6 @@
   <div id="domanda2" style="visibility:collapse; display:none; font-size:18px;">Al momento siamo in fase di sviluppo, <br> ma presto punteremo ad espanderci nelle più importanti capitali europee.</div>
   <br>
 </div>
-<!--Slide Show -->
-<section onclick="carousel">
-    <img class="homeSlides" src="slide_1.png" style="width:100%" />
-    <img class="homeSlides" src="slide_2.jpg" style="width:100%" />
-    <img class="homeSlides" src="slide_3.png" style="width:100%" />
-</section>
-<script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("homeSlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000);
-}
-</script>
 </body>
 </html>
