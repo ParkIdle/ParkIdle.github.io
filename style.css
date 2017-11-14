@@ -27,24 +27,6 @@
     opacity: 0.5;
     border-radius: 5px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
 .faq{
   text-shadow: 2px 2px black;
 
@@ -55,7 +37,6 @@
   transition-duration: 2s;
 }
 
->>>>>>> 8ddf4e5e1249d194f156fb438bb8502379bbe400
 .topNav a.active {
     background-color: yellow;
     color: purple;
@@ -64,12 +45,10 @@
 body {
   font-family: Helvetica,Tahoma;
   background-color: white;
-<<<<<<< HEAD
   background-image: url("res/smartcityAlt.png");
   position: sticky;
   width: auto;
   height: auto;
-=======
   background-image: url("res/blurry-city-lights.webp");
   background-attachment: fixed;
   background-repeat:no-repeat;
@@ -80,24 +59,6 @@ body {
 .domande{
   text-shadow: text-shadow: 2px 2px black;
   color: white;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 8ddf4e5e1249d194f156fb438bb8502379bbe400
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
-=======
->>>>>>> parent of 8ddf4e5... merge
 }
 
 .contactus {
