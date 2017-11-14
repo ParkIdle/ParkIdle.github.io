@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+  function rendiVisibile(nome){
+    if(document.getElementById(nome).style.visibility=="collapse"){
+        document.getElementById(nome).style.display="block";
+      document.getElementById(nome).style.visibility="visible";
+    }
+
+    else{ document.getElementById(nome).style.visibility="collapse";
+      document.getElementById(nome).style.display="none";
+    }
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<body>
+<!-- Content will go here -->
+<!-- Navigation -->
+<nav class="topNav" id="myTopNav">
+    <a href="index.html">Home</a>
+    <a href="whoweare.html">Who we are</a>
+    <a href="contactus.html">Contact us</a>
+    <a href="faq.html"> F.A.Q. </a>
+</nav>
+<h1 style="color:blue; font-size:350%; text-align:center;"> F.A.Q. </h1>
+
+<a href="#" style="font-size:23px" onclick="rendiVisibile('domanda')"> Questa app è uguale a tutte le altre app di parcheggi? </a>
+<div id="domanda" style="visibility:collapse; display:none; font-size=18px;" > No, questo è un progetto molto più ambizioso: lo scopo della nostra app è quello di mappare i parcheggi con dei sensori<br> in grado di rilevare se il parcheggio è libero o occupato.</div>
+<br>
+
+<a href="#" style="font-size:23px" onclick="rendiVisibile('domanda2')">ParkIdle funziona nella mia città? </a>
+<div id="domanda2" style="visibility:collapse; display:none; font-size:18px;">Al momento siamo in fase di sviluppo, <br> ma presto punteremo ad espanderci nelle più importanti capitali europee.</div>
+<br>
+
+<!--Slide Show -->
+<section onclick="carousel">
+    <img class="homeSlides" src="slide_1.png" style="width:100%" />
+    <img class="homeSlides" src="slide_2.jpg" style="width:100%" />
+    <img class="homeSlides" src="slide_3.png" style="width:100%" />
+</section>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("homeSlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+
+</nav>
+</body>
+</html>

@@ -22,6 +22,11 @@
     border-radius: 5px;
 }
 
+.tabellaImmagini {
+  transition-property: none;
+  transition-duration: 2s;
+}
+
 .topNav a.active {
     background-color: yellow;
     color: purple;
