@@ -1,43 +1,30 @@
+/*@@@@ NAVBAR @@@@*/
 .topNav {
-    background-color: grey;
-    text-shadow: 2px 2px black;
-    overflow:hidden;;
-    color: white;
-    border-radius: 10px;
-    opacity: 0.3;
-
+    background: rgba(204, 204, 204, 0.5);
+    margin: 0 0 1em 0;
+    padding: 0;
+    border-bottom: 2px solid rgba(126, 159, 176,0.4);
+    overflow:hidden;
+    width: 100%;
 }
-.menu{
-  opacity: 1;
 
-}
 .topNav a {
     float: left;
     display:flow-root;
-    color: white;
-
+    font-family:sans-serif;
+    text-decoration: none;
+    color: rgb(126, 159, 176);
+    font-weight:900;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 18px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 .topNav a:hover {
-    background-color: black;
-    color:white;
-
-    opacity: 1;
-    border-radius: 5px;
-}
-
-.faq{
-  text-shadow: 2px 2px black;
-
-}
-
-.tabellaImmagini {
-  transition-property: none;
-  transition-duration: 2s;
+    background: rgba(114, 224, 58,0.5);
+    color: rgb(126, 159, 176);
+    opacity: 0,8;
 }
 
 .topNav a.active {
@@ -45,26 +32,58 @@
     color: purple;
 }
 
-body {
-  background-color: white;
-  background-image: url("res/blurry-city-lights.webp");
-  background-attachment: fixed;
-  background-size: cover;
-  scroll-behavior: auto;
+/*@@@@ F.A.Q @@@@*/
+.faq{
+    text-shadow: 2px 2px black;
 }
 
 .domande{
-  text-shadow: text-shadow: 2px 2px black;
-  color: white;
-
-
+    text-shadow: text-shadow: 2px 2px black;
+    color: white;
 }
 
+/*@@@@ BODY @@@@*/
+body {
+    margin: 0px;
+    border: 0px;
+    background-color: white;
+    background-image: url("res/city2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: auto;
+}
+
+/*@@@@ CONTACT US @@@@*/
 .contactus {
+    width: 450px;
+    height: 415px;
+    background-color: rgba(204, 204, 204, 0.5);
+    opacity: 0.9;
+    border-radius: 10px;
+    float:right;
+}
+.contactus form{
     text-shadow: 2px 2px black;
     font-weight: bolder;
     text-align: left;
     color: white;
     font-size: 15;
     text-decoration-style: solid;
+}
+.contactdesc {
+    font-size: 20px;
+    float:left;
+    width: inherit;
+    text-shadow: 1px 1px black;
+    color: rgb(170, 180, 176);
+}
+
+.tabellaImmagini {
+    transition-property: none;
+    transition-duration: 2s;
+}
+
+/*@@@@ INDEX @@@@*/
+.logo {
+    text-align: center;
 }

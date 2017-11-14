@@ -14,30 +14,10 @@
     <a href="contactus.html">Contact us</a>
     <a href="faq.html"> F.A.Q. </a>
 </nav>
-<!--Slide Show -->
-<section onclick="carousel">
-    <img class="homeSlides" src="slide_1.png" style="width:100%" />
-    <img class="homeSlides" src="slide_2.jpg" style="width:100%" />
-    <img class="homeSlides" src="slide_3.png" style="width:100%" />
-</section>
-<script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
+<div class="logo">
+    <img src="res/parkidle2987×1308.png" style="width:50%" />
+</div>
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("homeSlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000);
-}
 </script>
-
-</nav>
 </body>
 </html>

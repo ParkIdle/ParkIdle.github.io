@@ -17,38 +17,47 @@ function sendEmail(){
         <a href="contactus.html">Contact us</a>
         <a href="faq.html"> F.A.Q. </a>
     </nav>
-    <form class="contactus" action="">
-        <table>
-            <tr><td>Name*:</td>
-            <td><input type="text" name="name" id="name" size="25" required />
-            </td></tr>
-            <tr><td>Surname*:</td>
-            <td><input type="text" name="surname" id="surname" size="25" required />
-            </td></tr>
-            <tr><td>Email*:</td>
-            <td><input type="text" name="email" id="email" size="25" required />
-            </td></tr>
-            <tr><td>Category:</td><td>
-                <select name="categories" id="categories" required>
-                    <option></option>
-                    <option value="student">Student</option>
-                    <option value="enterprise">Enterprise</option>
-                    <option value="public institution">Public institution</option>
-                    <option value="developer">Developer</option>
-                </select>
-            </td></tr>
-            <tr><td>Organization:</td>
-            <td><input type="text" name="organization" id="organization" size="25"placeholder="(optional)"/>
-            </td></tr>
-            <tr><td>Message*:</td>
-            <td>
-                <textarea name="message" placeholder="Write any request here..." rows="20" cols="50"/></textarea>
-            </td>
-            <tr><td><input type="submit" name="Submit" value="Submit" onsubmit="" /></td>
-            <td>
-                (Fields with '*' are required!)
-            </td></tr>
-        </table>
-    </form>
+    <div class="contactdesc">
+        <p>
+            If you are interested in our parking solution.<br />
+            if you want to install it in your city <br />
+            just send us some information about <br />
+            you and we will contact you soon!
+        </p>
+    </div>
+    <div class="contactus">
+        <form action="">
+            <table>
+                <tr><td>Name*:</td>
+                <td><input type="text" name="name" id="name" size="25" required />
+                </td></tr>
+                <tr><td>Surname*:</td>
+                <td><input type="text" name="surname" id="surname" size="25" required />
+                </td></tr>
+                <tr><td>Email*:</td>
+                <td><input type="text" name="email" id="email" size="25" required />
+                </td></tr>
+                <tr><td>Category*:</td><td>
+                    <select name="categories" id="categories" required>
+                        <option value="student">Student</option>
+                        <option value="enterprise">Enterprise</option>
+                        <option value="public institution">Public institution</option>
+                        <option value="developer">Developer</option>
+                    </select>
+                </td></tr>
+                <tr><td>Organization:</td>
+                <td><input type="text" name="organization" id="organization" size="25"placeholder="(optional)"/>
+                </td></tr>
+                <tr><td>Message*:</td>
+                <td>
+                    <textarea name="message" placeholder="Write any request here..." rows="20" cols="50"/></textarea>
+                </td>
+                <tr><td><input type="submit" name="Submit" value="Submit" onsubmit="" /></td>
+                <td>
+                    (Fields with '*' are required!)
+                </td></tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>
