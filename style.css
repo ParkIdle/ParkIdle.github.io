@@ -64,7 +64,7 @@
 
 .logo{
   position: absolute;
-  top: 550px;
+  top:500px;
   animation-name: example;
   animation-duration: 2s;
   animation-fill-mode:forwards;
