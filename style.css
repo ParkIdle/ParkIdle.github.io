@@ -87,7 +87,7 @@ body {
     margin: 0px;
     border: 0px;
     background-color: white;
-    background-image: url("res/city2.jpg");
+    /*background-image: url("res/city2.jpg");*/
     background-attachment: fixed;
     background-size: cover;
     scroll-behavior: auto;
