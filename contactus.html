@@ -10,13 +10,40 @@ function sendEmail(){
 }
 </script>
 <link rel="stylesheet" href="style.css">
+<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+ 
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
 <body>
-    <nav class="topNav" id="myTopNav">
-        <a href="index.html">Home</a>
-        <a href="whoweare.html">Who we are</a>
-        <a href="contactus.html">Contact us</a>
-        <a href="faq.html"> F.A.Q. </a>
-    </nav>
+<!-- Content will go here -->
+<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse id="bs-example-navbar-collapse-1">
+			<div class="container">
+				<ul class="nav navbar-nav">
+
+				<li><a href="jumbotron.html">Home</a></li>
+				<li><a href="bootstrap2.html">Who we are</a></li>
+				<li class="active"><a href="#">Contact us <span class="sr-only">(current)</span></a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Presentation</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">GitHub Project Folder</a></li>
+					</ul>
+				</ul>
+			</div>
+		</nav>
+	<div class="container" style="padding:100px 0 140px 0;">
+
     <div class="contactdesc">
         <p>
             If you are interested in our parking solution.<br />
@@ -25,39 +52,33 @@ function sendEmail(){
             you and we will contact you soon!
         </p>
     </div>
-    <div class="contactus">
-        <form action="">
-            <table>
-                <tr><td>Name*:</td>
-                <td><input type="text" name="name" id="name" size="25" required />
-                </td></tr>
-                <tr><td>Surname*:</td>
-                <td><input type="text" name="surname" id="surname" size="25" required />
-                </td></tr>
-                <tr><td>Email*:</td>
-                <td><input type="text" name="email" id="email" size="25" required />
-                </td></tr>
-                <tr><td>Category*:</td><td>
-                    <select name="categories" id="categories" required>
-                        <option value="student">Student</option>
-                        <option value="enterprise">Enterprise</option>
-                        <option value="public institution">Public institution</option>
-                        <option value="developer">Developer</option>
-                    </select>
-                </td></tr>
-                <tr><td>Organization:</td>
-                <td><input type="text" name="organization" id="organization" size="25"placeholder="(optional)"/>
-                </td></tr>
-                <tr><td>Message*:</td>
-                <td>
-                    <textarea name="message" placeholder="Write any request here..." rows="20" cols="50"/></textarea>
-                </td>
-                <tr><td><input type="submit" name="Submit" value="Submit" onsubmit="" /></td>
-                <td>
-                    (Fields with '*' are required!)
-                </td></tr>
-            </table>
-        </form>
-    </div>
+	
+	<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.8);">
+
+	<form>
+	  <div class="form-group">
+		<label for="exampleInputEmail1">Name</label>
+		<input type="Name" class="form-control" id="exampleInputEmail1" placeholder="">
+	  </div>
+	  <div class="form-group">
+		<label for="exampleInputPassword1">Last Name</label>
+		<input type="Last_Name" class="form-control" id="exampleInputPassword1" placeholder="">
+	  </div>
+	  	<div class="form-group">
+		<label for="exampleInputEmail1">Email</label>
+		<input type="Email" class="form-control" id="exampleInputEmail1" placeholder="exaple@mailprovider.com">
+	  </div>
+	  <div class="form-group">
+	  	<label for="exampleInputEmail1">Message:</label>
+		<textarea class="form-control" rows="5"></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	</div>
+	
+		
+	</div>
+<script src="bootstrap/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
