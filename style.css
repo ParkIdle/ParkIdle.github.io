@@ -143,3 +143,47 @@ body {
 .jumbotron {
     font-family: "Exo 2",serif;
 }
+
+.jumbotron #end{
+    font-weight: bolder;
+}
+
+.container-fluid{
+    font-family: "Exo 2",serif;
+    margin: 0 5% 0 5%;
+}
+
+.container-fluid .rows{
+    padding: 100px 50px 100px 50px;
+    
+}
+
+.container-fluid #run #title{
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container-fluid #run #desc{
+    font-size: 30px;
+}
+
+.container-fluid #spot #title{
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container-fluid #spot #desc{
+    font-size: 30px;
+}
+
+.container-fluid #park #title{
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container-fluid #park #desc{
+    font-size: 30px;
+}
