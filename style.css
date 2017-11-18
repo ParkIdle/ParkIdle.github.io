@@ -40,6 +40,22 @@
   border-radius: 10px;
   position: sticky;
 }
+
+/*@@@@ Who we Are @@@@*/
+
+.container-fluid h3{
+    font-family: "Exo 2",serif;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.container-fluid h6{
+    font-family: "Exo 2",serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
 @keyframes example {
   from {
     transform: scale3d(1, 1, 1);
