@@ -56,40 +56,18 @@
 }
 
 
-@keyframes example {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
 
-  10%, 20% {
-    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-  }
 
-  30%, 50%, 70%, 90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-
-  40%, 60%, 80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.logo{
-  position: absolute;
-  top:500px;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-fill-mode:forwards;
-}
 
 /*@@@@ F.A.Q @@@@*/
-.faq{
-    text-shadow: 2px 2px black;
+.faq #faq{
+  font-family: "Exo 2",serif;
+  font-weight: bolder;
+  padding-top: 100px;
+  font-size: 70px;
+  text-align: center;
 }
+
 
 .domande{
   background: rgba(197, 217, 234,0.5);
@@ -171,7 +149,7 @@ body {
 
 .container-fluid .rows{
     padding: 100px 50px 100px 50px;
-    
+
 }
 
 .container-fluid #run #title{
