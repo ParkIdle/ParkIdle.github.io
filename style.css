@@ -151,7 +151,6 @@ body {
 
 
 .container_img {
-
     padding: 0 150px 0 0;
     border-bottom: 2px solid black;
     margin: 0 5% 0 5%;
@@ -161,9 +160,7 @@ body {
   animation-name: pulse;
   animation-duration:1s;
   animation-direction:forward;
-
 }
-
 
 .container_img #home_slogan{
     font-family: "Exo 2",serif;
@@ -237,6 +234,7 @@ body {
     font-weight: bolder;
     text-align: center;
     color: #377bb5;
+
 }
 
 .buttons{
