@@ -4,11 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="dev/aos-master/css/styles.css" />
 	<link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
 	<link rel="stylesheet" href="style.css">
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
- 
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -37,10 +38,17 @@
 				</ul>
 			</div>
 		</nav>
-	
+
+
+        <div class="jumbotron text-center">
+                <h1>This is our team:</h1>
+                <p>*one of us is a photographer, that's why we look so nice.*</p>
+        </div>
+
+
  <div class="container-fluid">
 	<div class="row" style="padding:100px 100px 140px 100px;">
-		<div class="col-md-3">
+		<div class="col-sm-4">
 			<div class="thumbnail">
 				<img id="AlessioImmagine"
 				 class="img-thumbnail"
@@ -54,8 +62,21 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="col-md-3">
+        <div class="col-sm-8 text-center padded-text">
+            <h3>"That" Photographer</h3>
+            <h6>Alessio etc. etc.</h6>
+    </div>
+</div>
+
+<div class="container-fluid bg-normal">
+   <div class="row" style="padding:100px 100px 140px 100px;">
+
+       <div class="col-sm-8 text-center padded-text">
+           <h3>The Creative</h3>
+           <h6>Andrea etc. etc.</h6>
+
+       </div>
+		<div class="col-sm-4">
 			<div class="thumbnail">
 				<img id="AndreaImmagine"
 				 class="img-thumbnail"
@@ -69,6 +90,10 @@
 					</div>
 			</div>
 		</div>
+    </div>
+</div>
+<div class="container-fluid">
+   <div class="row"  style="padding:100px 100px 140px 100px;">
 		<div class="col-md-3">
 			<div class="thumbnail">
 				<img id="StaffaImmagine"
@@ -84,6 +109,11 @@
 				</div>
 			</div>
 		</div>
+    </div>
+</div>
+
+<div class="container-fluid bg-normal">
+   <div class="row" style="padding:100px 100px 140px 100px;">
 		<div class="col-md-3">
 			<div class="thumbnail">
 				<img id="SilvestriImmagine"
@@ -100,7 +130,49 @@
 		</div>
 	</div>
 </div>
-	
+
+<style>
+
+    .padded-text{
+        font-family: "Exo 2",serif;
+        padding: 100px 25px;
+    }
+    .padded-text h3{
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .padded-text h6{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .bg-normal {
+    background-color: #c5d9ea;
+    }
+
+    .jumbotron {
+        background-color: #c5d9ea; /* Orange */
+        color: #000000;
+        padding: 100px 25px;
+
+    }
+
+    .jumbotron h1 {
+        font-size: 60px;
+        font-weight: 800;
+    }
+    .jumbotron p {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .bg-aqua {
+        background-color: #c5ead7;
+    }
+
+
+</style>
+
 
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -110,6 +182,39 @@
     easing: 'ease-in-out-sine'
   });
 </script>
+<!-- Smooth Scrolling Script-->
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+<!-- end of Smoth Scrolling Script-->
+
 <script>
   var myIndex = 0;
   tabellaPresentazione();
@@ -140,7 +245,7 @@
  </script>
  </div>
 
- 
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
   </body>
