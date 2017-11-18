@@ -118,15 +118,37 @@ body {
 }
 
 /*@@@@ INDEX @@@@*/
-.logo {
-    text-align: center;
+
+@keyframes pulse{
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
+
+
 .container_img {
-    padding: 0 100px 0 0;
+
+    padding: 0 150px 0 0;
     border-bottom: 2px solid black;
     margin: 0 5% 0 5%;
 }
+.container_img #logo{
+
+  animation-name: pulse;
+  animation-duration:1s;
+  animation-direction:forward;
+
+}
+
 
 .container_img #home_slogan{
     font-family: "Exo 2",serif;
