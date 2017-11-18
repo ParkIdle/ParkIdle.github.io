@@ -87,15 +87,34 @@
 }
 
 /*@@@@ F.A.Q @@@@*/
-.faq{
-    text-shadow: 2px 2px black;
+.container .faq{
+    font-family: "Exo 2",serif;
+    font-size: 70px;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
 }
 
 .domande{
-  background: rgba(197, 217, 234,0.5);
-  border-radius: 100px;
-  padding: 20px;
-  opacity: 0,8;
+    font-family: "Exo 2",serif;
+    background: rgba(197, 217, 234,0.5);
+    border-radius: 100px;
+    padding: 20px;
+    opacity: 0,8;
+}
+
+.domande .question{
+    font-weight: bolder;
+    font-size: 40px;
+    display: block;
+    text-align: center;
+}
+
+#domanda,#domanda2,#domanda3,#domanda4{
+    font-size: 24px;
+    text-align: center;
+    visibility: collapse;
+    display:none;
 }
 
 /*@@@@ BODY @@@@*/
@@ -171,7 +190,6 @@ body {
 
 .container-fluid .rows{
     padding: 100px 50px 100px 50px;
-    
 }
 
 .container-fluid #run #title{
@@ -182,6 +200,7 @@ body {
 
 .container-fluid #run #desc{
     font-size: 30px;
+    border-left: 2px solid rgba(197, 217, 234,1);
 }
 
 .container-fluid #spot #title{
@@ -192,6 +211,7 @@ body {
 
 .container-fluid #spot #desc{
     font-size: 30px;
+    border-left: 2px solid rgba(197, 217, 234,1);
 }
 
 .container-fluid #park #title{
@@ -202,4 +222,28 @@ body {
 
 .container-fluid #park #desc{
     font-size: 30px;
+    border-left: 2px solid rgba(197, 217, 234,1);
+}
+
+.container #title{
+    font-family: "Exo 2",serif;
+    font-size: 70px;
+    font-weight: bolder;
+    text-align: center;
+    color: #377bb5;
+    border-top: 2px solid black;
+    padding: 10px;
+}
+
+.container #help{
+    font-family: "Exo 2",serif;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    color: #377bb5;
+}
+
+.buttons{
+    display: block;
+    text-align: center;
 }

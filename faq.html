@@ -15,6 +15,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
 <!-- Bootstrap -->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
@@ -48,25 +49,26 @@
 			</div>
 		</nav>
 	<div class="container" style="padding:200px 0 140px 0;">
-		<h1  class= "faq" style="color:white; font-size:350%; text-align:center;"> F.A.Q. </h1>
+        <h1 class="faq">F.A.Q. </h1>
 
-		<div class="domande" style="text-align:center;">
-		  <a  href="#" style="font-size:23px; color:blue;" onclick="rendiVisibile('domanda')"> Questa app è uguale a tutte le altre app di parcheggi? </a>
-		  <div id="domanda" style="visibility:collapse; display:none; font-size:18px;" > No, questo è un progetto molto ambizioso: lo scopo della nostra app è quello di segnalare i parcheggi <br>
-        che si liberano, basandosi sulle informazioni ottenute dagli altri utenti. Più utenti utilizzano l'app, più <br> sarà alta la probabilità di trovare parcheggi liberi.</div>
-		  <br>
+		<div class="domande">
+            <a class="question" href="#" onclick="rendiVisibile('domanda')"> Does this app works like other parkin' apps? </a>
+		    <div id="domanda"> No, this is a unique project: we wanna help people finding an empty parking spot using only their GPS.<br>
+                Each user who will have the app running, communicates his status with our servers,so everyone can receive updates about others!<br />For example: if I am leaving a parking spot,
+                others will receive a notification about my departure, that's how they find where to park.<br /> Most users use ParkIdle,the better the app will work!</div>
+		    <br>
 
-		  <a  href="#" style="font-size:23px; color:blue;" onclick="rendiVisibile('domanda2')">ParkIdle funziona nella mia città? </a>
-		  <div id="domanda2" style="visibility:collapse; display:none; font-size:18px;">Al momento siamo in fase di sviluppo, <br> ma presto punteremo ad espanderci nelle più importanti capitali europee.</div>
-		  <br>
-		  <a href="#" style="font-size:23px; color:blue;" onclick="rendiVisibile('domanda3')">Come funziona l'app? </a>
-		  <div id="domanda3" style="visibility:collapse; display:none; font-size:18px;">L'app sfrutta le informazioni dei vari utenti, segnalando i parcheggi liberi vicino a te:<br>
-		  apri l'app e troverai dei pin colorati vicino a te sulla mappa, i quali indicheranno i parcheggi liberi, tutto quello che devi fare è dirigerti verso il più vicino.
-		  </div>
-		  <br>
-		  <a  href="#" style="font-size:23px; color:blue;" onclick="rendiVisibile('domanda4')">Su quali dispositivi sarà disponibile? </a>
-		  <div id="domanda4" style="visibility:collapse; display:none; font-size:18px;">Inizialmente rilasceremo l'app su Android ma in futuro potremmo sviluppare anche una versione per iOS :) .
-		  </div>
+		    <a class="question" href="#" onclick="rendiVisibile('domanda2')">Where can I use ParkIdle? </a>
+		    <div id="domanda2">You can use it everywhere, <br> but as mentioned above, it will work better where there are people who use it.</div>
+		    <br>
+		    <a class="question" href="#" onclick="rendiVisibile('domanda3')">Come funziona l'app? </a>
+		    <div id="domanda3">L'app sfrutta le informazioni dei vari utenti, segnalando i parcheggi liberi vicino a te:<br>
+		        apri l'app e troverai dei pin colorati vicino a te sulla mappa, i quali indicheranno i parcheggi liberi, tutto quello che devi fare è dirigerti verso il più vicino.
+		    </div>
+		    <br>
+		    <a class="question" href="#" onclick="rendiVisibile('domanda4')">Su quali dispositivi sarà disponibile? </a>
+		    <div id="domanda4">Inizialmente rilasceremo l'app su Android ma in futuro potremmo sviluppare anche una versione per iOS :) .
+		    </div>
 		</div>
 	</div>
 
