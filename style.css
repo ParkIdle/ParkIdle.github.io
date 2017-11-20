@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.trans-bg{
+        background: rgba(200, 54, 54,0.5); 
+}
+
 .topNav a {
     float: left;
     display:flow-root;
