@@ -10,7 +10,7 @@
 }
 
 .trans-bg{
-        background: rgba(200, 54, 54,0.5); 
+        background: rgba(200, 54, 54,0.5);
 }
 
 .topNav a {
@@ -179,8 +179,7 @@ body {
 .jumbotron #end{
     font-weight: bolder;
 }
-
-.container-fluid{
+.index-fluid{
     font-family: "Exo 2",serif;
     margin: 0 5% 0 5%;
 }
