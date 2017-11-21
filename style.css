@@ -10,7 +10,7 @@
 }
 
 .trans-bg{
-        background: rgba(200, 54, 54,0.5); 
+        background: rgba(200, 54, 54,0.5);
 }
 
 .topNav a {
@@ -45,6 +45,20 @@
   position: sticky;
 }
 
+.parkidle_button{
+border-radius: 10px;
+}
+
+.parkidle_button:hover {
+  background-color: #3a3b3d
+}
+
+.parkidle_button:active {
+  background-color:#3a3b3d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 /*@@@@ Who we Are @@@@*/
 
 .container-fluid h3{
@@ -70,6 +84,10 @@
     font-weight: bolder;
     display: block;
     text-align: center;
+}
+.container .answer{
+
+  font-weight: bolder;
 }
 
 
