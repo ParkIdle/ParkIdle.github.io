@@ -197,8 +197,7 @@ body {
 .jumbotron #end{
     font-weight: bolder;
 }
-
-.container-fluid{
+.index-fluid{
     font-family: "Exo 2",serif;
     margin: 0 5% 0 5%;
 }
