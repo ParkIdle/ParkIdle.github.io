@@ -85,7 +85,8 @@ border-radius: 10px;
     text-align: center;
 }
 .container .answer{
-
+  visibility: collapse;
+  display: none;
   font-weight: bolder;
 }
 
