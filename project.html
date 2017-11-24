@@ -82,7 +82,7 @@
                         Our application is basically like every other ordinary maps application, beside </h1><h3>one detail:</h3><h1>
                     </h1>
                 </div>
-                <div class="col-sm-4" style="padding:0px 0px 0px 150px;background:rgb(219, 234, 197);" id="incipit">
+                <div class="col-sm-4" style="padding:0px 0px 0px 100px;background:rgb(219, 234, 197);" id="incipit">
                     <span class="glyphicon glyphicon-check" style="font-size:14.5em;background:rgb(219, 234, 197);"></span>
                 </div>
             </div>
@@ -104,8 +104,109 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid index-fluid" style="background: rgba(197, 217, 234,1);padding:0px 0px 100px 0px;">
+            <div class="rows" style="background: rgba(197, 217, 234,1);" id="incipit">
+                <div class="col-sm-8" style="background: rgba(197, 217, 234,1);" id="incipit">
+                    <h1>we did a research and these are how many minutes<br>
+                        you spend, daily, to find a good parking spot.<br></h1>
+                </div>
+                <div class="col-sm-4" style="background: rgba(197, 217, 234,1);" id="incipit">
+                    <div id='myChart' style="padding:0px 0px 520px 0px;"></div>
+                </div>
+            </div>
+        </div>
 
 <script src="bootstrap/jquery.js"></script>
+<script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+var myConfig = {
+ 	type: "pie",
+ 	plot: {
+ 	  borderColor: "#2B313B",
+ 	  borderWidth: 5,
+ 	  // slice: 90,
+ 	  valueBox: {
+ 	    placement: 'out',
+ 	    text: '%t\n%npv%',
+ 	    fontFamily: "Open Sans"
+ 	  },
+ 	  tooltip:{
+ 	    fontSize: '18',
+ 	    fontFamily: "Open Sans",
+ 	    padding: "5 10",
+ 	    text: "%npv%"
+ 	  },
+ 	  animation:{
+      effect: 2,
+      method: 4,
+      speed: 900,
+      sequence: 1,
+      delay: 3000
+    }
+ 	},
+ 	source: {
+ 	  text: '',
+ 	  fontColor: "#8e99a9",
+ 	  fontFamily: "Open Sans"
+ 	},
+ 	title: {
+ 	  fontColor: "#8e99a9",
+ 	  text: '',
+ 	  align: "left",
+ 	  offsetX: 10,
+ 	  fontFamily: "Open Sans",
+ 	  fontSize: 25
+ 	},
+ 	subtitle: {
+ 	  offsetX: 10,
+ 	  offsetY: 10,
+ 	  fontColor: "#8e99a9",
+ 	  fontFamily: "Open Sans",
+ 	  fontSize: "16",
+ 	  text: '',
+ 	  align: "left"
+ 	},
+ 	plotarea: {
+ 	  margin: "0 0 0 0"
+ 	},
+	series : [
+		{
+		  values: [35.1],
+		  text: "0-10",
+		  backgroundColor: '#FF7965',
+          detached:true
+		},
+		{
+		  values: [40.8],
+		  text: '10-20',
+		  backgroundColor: '#FFCB45',
+		},
+		{
+		  text: '20-30',
+		  values: [18.3],
+		  backgroundColor: '#6877e5'
+
+
+		},
+		{
+		  text: '+30',
+		  values: [5.7],
+		  backgroundColor: '#6FB07F'
+
+
+		}
+	]
+};
+
+zingchart.render({
+	id : 'myChart',
+	data : myConfig,
+	height: '100%',
+	width: '100%'
+});
+</script>
 </body>
 </html>
