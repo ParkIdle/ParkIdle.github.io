@@ -4,6 +4,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="dev/aos-master/css/styles.css" />
+<link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
 <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
@@ -49,14 +51,14 @@
 
         <div class="container_img">
             <img id="logo" src="res/parkidle_off_trasp.png" style="width: 60%; padding:140px 0 140px 0;"></img>
-            <p id="home_slogan">
+            <p id="home_slogan" data-aos="slide-right">
                 Your favourite park finder.
             </p>
         </div>
 
         <div class="container-fluid index-fluid">
-            <div class="rows" id="run">
-                <div class="col-sm-4" id="title">
+            <div class="rows" id="run" >
+                <div class="col-sm-4" id="title" data-aos="zoom-out" data-aos-once="true">
                     Run
                 </div>
                 <div class="col-sm-7" id="desc">
@@ -70,23 +72,22 @@
                     When ParkIdle spots somebody who's leaving a parking spot,
                     it will notify that event.
                 </div>
-                <div class="col-sm-4" id="title">
+                <div class="col-sm-4" id="title" data-aos="zoom-out" data-aos-once="true">
                     Spot
                 </div>
             </div>
             <div class="rows" id="park">
-                <div class="col-sm-4" id="title">
+                <div class="col-sm-4" id="title" data-aos="zoom-out" data-aos-once="true">
                     Park
                 </div>
                 <div class="col-sm-7" id="desc">
                     Now you just have to click on the notification,<br />
                     and follow the navigator!
-
                 </div>
             </div>
         </div>
 
-		<div class="container" style="padding:200px 0 140px 0;">
+		<div class="container" style="padding:200px 0 50px 0;" data-aos="fade-up">
 			<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.5);">
 				 <h1>Parking, made simple.</h1>
 				 <p>Tired to waste time looking for someone who's exiting a parking space when you need it?</p>
@@ -95,7 +96,7 @@
 			</div>
 		</div>
 
-        <div class="container">
+        <div class="container" id="wannahelp" data-aos="fade-in">
             <h1 id="title">Wanna help the parking community?</h1>
             <p id="help">Just install our widget, and let the app be always on.<br />
                 It communicate with our system, helping other people to find an empty parking spot!
@@ -106,7 +107,16 @@
             </div>
         </div>
 
-
+<script src="dev/aos-master/dist/aos.js"></script>
+<!-- Smooth Scrolling Animation -->
+<script src="dev/aos-master/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 120,
+    duration: 700,
+    easing: 'ease-out-quad'
+  });
+</script>
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

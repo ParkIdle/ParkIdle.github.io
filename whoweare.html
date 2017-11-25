@@ -62,7 +62,7 @@
 				 onmouseout="BackAlessio(this)">
 			</div>
 		</div>
-        <div class="col-sm-8">
+        <div class="col-sm-8" data-aos="fade-left">
             <div class=" text-center padded-text">
                 <h3>Alessio Cesaretti</h3>
             </div>
@@ -76,7 +76,7 @@
 <div class="container-fluid bg-normal">
    <div class="row" style="padding:100px 100px 140px 100px;">
 
-       <div class="col-sm-8">
+       <div class="col-sm-8" data-aos="fade-right">
            <div class="text-center padded-text">
                <h3>Andrea Misuraca</h3>
            </div>
@@ -109,7 +109,7 @@
 				 onmouseout="BackStaffa(this)">
 			</div>
 		</div>
-        <div class="col-sm-8">
+        <div class="col-sm-8" data-aos="fade-left">
             <div class=" text-center padded-text">
                 <h3>Simone Staffa</h3>
             </div>
@@ -123,7 +123,7 @@
 
 <div class="container-fluid bg-normal">
    <div class="row" style="padding:100px 100px 140px 100px;">
-       <div class="col-sm-8">
+       <div class="col-sm-8" data-aos="fade-right">
            <div class="text-center padded-text">
                <h3>Simone Silvestri</h3>
            </div>
@@ -190,12 +190,15 @@
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="dev/aos-master/dist/aos.js"></script>
+<!-- Smooth Scrolling Animation -->
+<script src="dev/aos-master/dist/aos.js"></script>
 <script>
   AOS.init({
-    easing: 'ease-in-out-sine'
+    offset: 200,
+    duration: 700,
+    easing: 'ease-out-quad'
   });
 </script>
-<!-- Smooth Scrolling Script-->
 
 
 <script>
@@ -254,6 +257,10 @@ $(document).ready(function(){
   }
   function BackSilvestri(x){
     x.src = "res/silvestri.jpg";
+  }
+
+  function animate(x){
+      x.viewport
   }
  </script>
  </div>
