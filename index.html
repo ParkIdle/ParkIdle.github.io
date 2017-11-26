@@ -35,7 +35,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a id="betatester" href="contactus.html">Join us as Betatester!</a></li>
 					<li class="dropdown">
-					<a id="documentation" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a id="documentation" href="#">Documentation</a></li>
 						<li><a id="presentation" href="#">Presentation</a></li>
@@ -57,8 +57,11 @@
         </div>
 
         <div class="container-fluid index-fluid">
+            <p id="easy" data-aos="fade-up">
+                Parking was never so easy!
+            </p>
             <div class="rows" id="run" >
-                <div class="col-sm-4" id="title" data-aos="zoom-out" data-aos-once="true">
+                <div class="col-sm-4" id="title" data-aos="zoom-out">
                     Run
                 </div>
                 <div class="col-sm-7" id="desc">
@@ -72,12 +75,12 @@
                     When ParkIdle spots somebody who's leaving a parking spot,
                     it will notify that event.
                 </div>
-                <div class="col-sm-4" id="title" data-aos="zoom-out" data-aos-once="true">
+                <div class="col-sm-4" id="title" data-aos="zoom-out">
                     Spot
                 </div>
             </div>
             <div class="rows" id="park">
-                <div class="col-sm-4" id="title" data-aos="zoom-out" data-aos-once="true">
+                <div class="col-sm-4" id="title" data-aos="zoom-out">
                     Park
                 </div>
                 <div class="col-sm-7" id="desc">
@@ -113,7 +116,8 @@
 <script>
   AOS.init({
     offset: 120,
-    duration: 700,
+    duration: 900,
+    once: true,
     easing: 'ease-out-quad'
   });
 </script>
