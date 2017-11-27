@@ -32,7 +32,7 @@
 					<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Documentation</a></li>
+						<li><a href="documentation.html">Documentation</a></li>
 						<li><a href="#">Presentation</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#">GitHub Project Folder</a></li>
@@ -62,7 +62,7 @@
 				 onmouseout="BackAlessio(this)">
 			</div>
 		</div>
-        <div class="col-sm-8">
+        <div class="col-sm-8" data-aos="fade-left">
             <div class=" text-center padded-text">
                 <h3>Alessio Cesaretti</h3>
             </div>
@@ -76,12 +76,12 @@
 <div class="container-fluid bg-normal">
    <div class="row" style="padding:100px 100px 140px 100px;">
 
-       <div class="col-sm-8">
+       <div class="col-sm-8" data-aos="fade-right">
            <div class="text-center padded-text">
                <h3>Andrea Misuraca</h3>
            </div>
            <div style="padding:0px 50px 0px 0px">
-               <h6>Tinder-addicted fuccboi who want to laid every erasmus girl are near him in 26km.</h6>
+               <h6>Our social-addicted creative mind, without his iPhone he's lost.</h6>
            </div>
        </div>
 		<div class="col-sm-4">
@@ -109,7 +109,7 @@
 				 onmouseout="BackStaffa(this)">
 			</div>
 		</div>
-        <div class="col-sm-8">
+        <div class="col-sm-8" data-aos="fade-left">
             <div class=" text-center padded-text">
                 <h3>Simone Staffa</h3>
             </div>
@@ -123,7 +123,7 @@
 
 <div class="container-fluid bg-normal">
    <div class="row" style="padding:100px 100px 140px 100px;">
-       <div class="col-sm-8">
+       <div class="col-sm-8" data-aos="fade-right">
            <div class="text-center padded-text">
                <h3>Simone Silvestri</h3>
            </div>
@@ -190,12 +190,15 @@
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="dev/aos-master/dist/aos.js"></script>
+<!-- Smooth Scrolling Animation -->
+<script src="dev/aos-master/dist/aos.js"></script>
 <script>
   AOS.init({
-    easing: 'ease-in-out-sine'
+    offset: 80,
+    duration: 700,
+    easing: 'ease-out-quad'
   });
 </script>
-<!-- Smooth Scrolling Script-->
 
 
 <script>
@@ -254,6 +257,10 @@ $(document).ready(function(){
   }
   function BackSilvestri(x){
     x.src = "res/silvestri.jpg";
+  }
+
+  function animate(x){
+      x.viewport
   }
  </script>
  </div>

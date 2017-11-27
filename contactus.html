@@ -10,6 +10,8 @@ function sendEmail(){
 }
 </script>
 <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
+<link rel="stylesheet" href="dev/aos-master/css/styles.css" />
+<link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
 <link rel="stylesheet" href="style.css">
 <!-- Bootstrap -->
@@ -49,12 +51,12 @@ function sendEmail(){
 		</nav>
 	<div class="container" style="padding:100px 0 140px 0;">
 
-    <div class="jumbotron" style="background-color: rgba(197, 217, 234,0);">
+    <div class="jumbotron" style="background-color: rgba(197, 217, 234,0);" data-aos="zoom-out">
           <h1>Apply our form to get involved in our revolution!</h1>
           <p>we'll add you to our betatesting program and we'll inform you about our news and uptades!</p>
           <h5>*don't worry, we won't spam you too much*</h5>
     </div>
-	<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.8);">
+	<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.8);" data-aos="fade-up">
 	<form>
 	  <div class="form-group">
 		<label for="exampleInputEmail1">Name</label>
@@ -89,5 +91,15 @@ function sendEmail(){
 	</div>
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Smooth Scrolling Animation -->
+<script src="dev/aos-master/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 80,
+    once: true,
+    duration: 600,
+    easing: 'ease-in-out'
+  });
+</script>
 </body>
 </html>
