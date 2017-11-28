@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
 <link rel="stylesheet" href="dev/aos-master/css/styles.css" />
 <link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
@@ -48,18 +49,19 @@
           <h5>*don't worry, we won't spam you too much*</h5>
     </div>
 	<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.8);" data-aos="fade-up">
-	<form>
+
+	<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwgbqTI6YeY7fcmsnsDAnqUul-dRP7Il9b1guVswP330VUboRQ/exec">
 	  <div class="form-group">
 		<label for="exampleInputEmail1">Name</label>
-		<input type="Name" class="form-control" id="exampleInputEmail1" placeholder="">
+		<input type="text" class="form-control" id="nome" placeholder="">
 	  </div>
 	  <div class="form-group">
 		<label for="exampleInputPassword1">Last Name</label>
-		<input type="Last_Name" class="form-control" id="exampleInputPassword1" placeholder="">
+		<input type="text" class="form-control" id="last_name" placeholder="">
 	  </div>
 	  	<div class="form-group">
 		<label for="exampleInputEmail1">Email</label>
-		<input type="Email" class="form-control" id="exampleInputEmail1" placeholder="example@mailprovider.com">
+		<input type="text" class="form-control" id="email" placeholder="example@mailprovider.com">
 	  </div>
 	  <div class="form-group">
           <h3> i want to receive updates and news for:</h3>
@@ -68,14 +70,15 @@
       </div>
 	  <div class="form-group">
 	  	<label for="exampleInputEmail1">Message:</label>
-		<textarea class="form-control" rows="5"></textarea>
+		<textarea type="text" class="message" id="message" rows="5"></textarea>
 	  </div>
       <div class="form-group">
 	  <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-  </div>
-  </div>
+  	</div>
 
 	</form>
+</div>
+
 
 
 
