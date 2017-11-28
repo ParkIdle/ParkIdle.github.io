@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+ 
+<script type="text/javascript">
+  function rendiVisibile(nome){
+    if(document.getElementById(nome).style.visibility=="collapse"){
+        document.getElementById(nome).style.display="block";
+      document.getElementById(nome).style.visibility="visible";
+    }
+
+    else{ document.getElementById(nome).style.visibility="collapse";
+      document.getElementById(nome).style.display="none";
+    }
+  }
+
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
+<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<link rel="stylesheet" href="dev/aos-master/css/styles.css" />
+<link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+<body>
+<!-- Content will go here -->
+<!-- Navigation -->
+
+<!--
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-left" id="bs-example-navbar-collapse-1" role="navigation">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+            <a href="index.html" class="navbar-left"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: 5px; margin-right: 10px;"></a>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="whoweare.html">Who we are</a></li>
+              <li><a href="project.html">Our project</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="contactus.html" style="border-bottom: 4px solid #8EC449;">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Presentation</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">GitHub Project Folder</a></li>
+      </ul>
+                <li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
+                <li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
+    </ul>
+  </div>
+</nav>
+
+-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: -10px; margin-right: -10px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+	  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="whoweare.html">Who we are</a></li>
+              <li><a href="project.html">Our project</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="contactus.html" style="border-bottom: 4px solid #8EC449;">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Presentation</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">GitHub Project Folder</a></li>
+      </ul>
+                <li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
+                <li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
+    </ul>
+  </div>
+
+    </div>
+  </div>
+</nav>
+
+
+	<div class="container" style="padding:150px 0 140px 0;">
+        <h1 class="faq">F.A.Q. </h1>
+
+		<div class="domande">
+            <a class="question" href="#" onclick="rendiVisibile('domanda')"> Does this app work like other parking apps? </a>
+		    <div id="domanda"  class="answer" style="visibility: collapse; display: none;"> No, this is a unique project: we want help people at finding an empty parking spot using only their GPS.<br>
+                Each user who will have the app running, communicates his status with our servers,so everyone can receive updates about others!<br />For example: if I am leaving a parking spot,
+                others will receive a notification about my departure, that's how they find where to park.<br /> The most users use ParkIdle,the better the app will work!</div>
+		    <br>
+
+		    <a class="question" href="#" onclick="rendiVisibile('domanda2')">Where can I use ParkIdle? </a>
+		    <div id="domanda2" class="answer" style="visibility: collapse; display: none;">You can use it everywhere, <br> but as mentioned above, it will work better where there are people who use it.</div>
+		    <br>
+		    <a class="question" href="#" onclick="rendiVisibile('domanda3')">How does the app works? </a>
+		    <div id="domanda3" class="answer" style="visibility: collapse; display: none;">The app uses the information of the users, showing the empty parking spots near you:<br>
+		        open the app and you will find some coloured pin near you on the map, they will show you the empty parking spots, just tap on them and follow the instruction.
+		    </div>
+		    <br>
+		    <a class="question" href="#" onclick="rendiVisibile('domanda4')">Does this app work on my phone? </a>
+		    <div id="domanda4" class="answer" style="visibility: collapse; display: none;">At first we'll realease the App on Android but in the future we will develop an iOS version :) .
+		    </div>
+		</div>
+	</div>
+
+<script src="bootstrap/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
