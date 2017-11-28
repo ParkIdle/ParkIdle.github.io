@@ -2,6 +2,13 @@
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
+@media (min-width:992px) {
+
+    body {padding-top:HEIGHTOFNAVBAR}
+    .navbar-static-top {position:fixed;top:0;right:0;left:0;}
+
+}
+
 .topNav {
     background: rgba(204, 204, 204, 0.5);
     margin: 0 0 1em 0;
