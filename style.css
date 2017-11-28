@@ -129,9 +129,7 @@ body {
 .faq {
     width: 450px;
     height: 415px;
-    background-color: rgba(204, 204, 204, 0.5);
-    opacity: 0.9;
-    border-radius: 10px;
+    float:right;    
 }
 
 .contactus {
