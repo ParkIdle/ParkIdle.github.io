@@ -59,7 +59,7 @@ border-radius: 10px;
 .parkidle_button:active {
   background-color:#3a3b3d;
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateX(4px;
 }
 
 /*@@@@ Who we Are @@@@*/
