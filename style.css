@@ -75,6 +75,8 @@
 .sottolineata{
   border-bottom: 4px solid #8EC449;
   height: 50px;
+  margin-right: 4px;
+  margin-left: 4px;
 
 }
 

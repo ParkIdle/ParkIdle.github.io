@@ -24,50 +24,50 @@
 <body>
 <!-- Content will go here -->
 <!-- Navigation -->
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="navbar1" style="position:fixed; width:100%; z-index:1;">
   <div class="container-fluid">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-	  <a class="navbar-brand" href="#"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: -10px; margin-right: -10px;"></a>
-	</div>
-	<div class="collapse navbar-collapse" id="myNavbar">
-	  <div class="container-fluid">
-	<ul class="nav navbar-nav">
-			  <li><a href="index.html">Home</a></li>
-			  <li><a href="whoweare.html">Who we are</a></li>
-			  <li class="active"><a href="#" style="border-bottom: 4px solid #8EC449;">Our project<span class="sr-only">(current)</span></a></li>
-			  <li><a href="faq.html">FAQ</a></li>
-	</ul>
-	<ul class="nav navbar-nav navbar-right">
-			  <li><a href="contactus.html">Join us as Betatester!</a></li>
-			  <li class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
-			  <ul class="dropdown-menu">
-				<li><a href="#">Documentation</a></li>
-				<li><a href="#">Presentation</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">GitHub Project Folder</a></li>
-	  </ul>
-				<li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
-				<li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
-	</ul>
-  </div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+	  	<div class="container-fluid">
+    		<ul class="nav navbar-nav">
+        		<a href="index.html" class="navbar-left"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: 5px; margin-right: 10px;"></a>
+              	<li><a class="underline-from-left" href="index.html">Home</a></li>
+              	<li><a class="underline-from-left" href="whoweare.html">Who we are</a></li>
+              	<li class="sottolineata"><a class="underline-from-left" href="project.html">Our project</a></li>
+              	<li><a href="faq.html" >FAQ</a></li>
+    		</ul>
+    		<ul class="nav navbar-nav navbar-right">
+         		<li ><a class="underline-from-left" href="contactus.html">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
+            	<li class="dropdown">
+              	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+              	<ul class="dropdown-menu">
+                	<li><a href="#">Documentation</a></li>
+                	<li><a href="#">Presentation</a></li>
+                	<li role="separator" class="divider"></li>
+                	<li><a href="#">GitHub Project Folder</a></li>
+      			</ul>
+                	<li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
+                	<li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
+    		</ul>
+  		</div>
 	</div>
   </div>
 </nav>
-        <div class="container-fluid index-fluid" style="background: rgba(197, 217, 234,1);padding:0px 0px 100px 0px;">
-        <div class="jumbotron" style="background: rgba(197, 217, 234,1); padding:50px 50px 50px 50px; ">
-            <div class="rows" style="background: rgba(197, 217, 234,1);padding:50px 50px 150px 50px;" id="head">
+        <div class="container-fluid index-fluid" style="background: rgba(197, 217, 234,1); padding: 50px;">
+        <div class="jumbotron" style="background: rgba(197, 217, 234,1);">
+            <div class="rows" style="background: rgba(197, 217, 234,1); padding: 0px 0px 100px 100px;" id="head">
                 <div class="col-sm-8" id="head" data-aos="fade-right">
                     <h1>One idea,<br>million of problems solved.</h1>
                     <p>ok, maybe we are magnifying our app a little bit.</p>
                 </div>
-                <div class="col-sm-4"style="background: rgba(197, 217, 234,1);" id="head" data-aos="zoom-out-left">
+                <div class="col-sm-4"style="background: rgba(197, 217, 234,1); padding: 20px 0px 100px 100px;" id="head" data-aos="zoom-out-left">
                     <img id="idea"
                      class="img"
                      src="res/idea.png"
@@ -78,9 +78,9 @@
             </div>
         </div>
 
-        <div class="container-fluid index-fluid" style="background:rgb(215, 197, 234); padding:0px 0px 0px 0px;">
+        <div class="container-fluid index-fluid" style="background:rgb(215, 197, 234); padding:100px 100px 100px 100px;">
             <div class="rows" style="background:rgb(215, 197, 234);"id="incipit">
-                <div class="col-sm-4" style="background:rgb(215, 197, 234); padding:0px 50px 100px 50px;" id="incipit" data-aos="zoom-in-right">
+                <div class="col-sm-4" style="background:rgb(215, 197, 234); padding:0px 0px 0px 0px;" id="incipit" data-aos="zoom-in-right">
                     <span class="glyphicon glyphicon-search" style="font-size:14.5em;"></span>
                 </div>
 
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid index-fluid"style="background:rgb(219, 234, 197);padding:0px 50px 100px 50px;">
+        <div class="container-fluid index-fluid"style="background:rgb(219, 234, 197);padding:50px 50px 100px 50px;">
             <div class="rows" style="background:rgb(219, 234, 197)" id="incipit">
                 <div class="col-sm-8" style="background:rgb(219, 234, 197)" id="incipit" data-aos="fade-right">
                     <h1>The idea is based on our near future concept of smart cities, where "smart" object help us with nowdays problems, getting them more easier to resolve.<br>
@@ -103,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid text-center index-fluid" style="background: rgb(197, 234, 199); padding:0px 0px 100px 0px;">
+        <div class="container-fluid text-center index-fluid" style="background: rgb(197, 234, 199); padding:100px 0px 100px 0px;">
             <div class="rows" style="background:rgb(197, 234, 199)" id="incipit">
                 <div class="col-sm-12" style="background:rgb(197, 234, 199)" id="incipit" data-aos="fade-in">
                     <h3>it show you everyone who's around you and he's going away from a parking spot.</h3>
@@ -238,6 +238,18 @@ zingchart.render({
     duration: 600,
     easing: 'ease-in-out'
   });
+</script>
+<script>
+	window.onscroll = function(){
+		onScrollFunction()
+	};
+	function onScrollFunction(){
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    		document.getElementById("navbar1").style.top = "0";
+  		} else {
+    		document.getElementById("navbar1").style.top = "0px";
+  		}
+	}
 </script>
 </body>
 </html>

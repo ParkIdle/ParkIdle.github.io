@@ -21,43 +21,42 @@
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
   <body>
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-      	<div class="navbar-header">
-      	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-      		<span class="icon-bar"></span>
-      		<span class="icon-bar"></span>
-      		<span class="icon-bar"></span>
-      	  </button>
-      	  <a class="navbar-brand" href="#"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: -10px; margin-right: -10px;"></a>
-      	</div>
-      	<div class="collapse navbar-collapse" id="myNavbar">
-      	  <div class="container-fluid">
-      	<ul class="nav navbar-nav">
-      			  <li><a href="index.html">Home</a></li>
-      			  <li class="active" style="border-bottom: 4px solid #8EC449;"><a href="whoweare.html">Who we are<span class='sr-only'>(current)</span></a></li>
-      			  <li><a href="#">Our project</a></li>
-      			  <li><a href="faq.html">FAQ</a></li>
-      	</ul>
-      	<ul class="nav navbar-nav navbar-right">
-      			  <li><a href="#" id="username_nav"></a></li>
-      			  <li><a href="contactus.html">Join us as Betatester!</a></li>
-      			  <li class="dropdown">
-      			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
-      			  <ul class="dropdown-menu">
-      				<li><a href="#">Documentation</a></li>
-      				<li><a href="#">Presentation</a></li>
-      				<li role="separator" class="divider"></li>
-      				<li><a href="#">GitHub Project Folder</a></li>
-      	  </ul>
-      				<li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
-      				<li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
-      	</ul>
-        </div>
+	  <nav class="navbar navbar-inverse" id="navbar1" style="position:fixed; width:100%; z-index:1;">
+	    <div class="container-fluid">
+	      <div class="navbar-header">
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
 
-      	</div>
-        </div>
-      </nav>
+	      </div>
+	      <div class="collapse navbar-collapse" id="myNavbar">
+	  	  	<div class="container-fluid">
+	      		<ul class="nav navbar-nav">
+	          		<a href="index.html" class="navbar-left"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: 5px; margin-right: 10px;"></a>
+	                	<li><a class="underline-from-left" href="index.html">Home</a></li>
+	                	<li class="sottolineata"><a class="underline-from-left" href="whoweare.html">Who we are</a></li>
+	                	<li><a class="underline-from-left" href="project.html">Our project</a></li>
+	                	<li><a href="faq.html" >FAQ</a></li>
+	      		</ul>
+	      		<ul class="nav navbar-nav navbar-right">
+	           		<li ><a class="underline-from-left" href="contactus.html">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
+	              	<li class="dropdown">
+	                	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+	                	<ul class="dropdown-menu">
+	                  	<li><a href="#">Documentation</a></li>
+	                  	<li><a href="#">Presentation</a></li>
+	                  	<li role="separator" class="divider"></li>
+	                  	<li><a href="#">GitHub Project Folder</a></li>
+	        			</ul>
+	                  	<li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
+	                  	<li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
+	      		</ul>
+	    		</div>
+	  	</div>
+	    </div>
+	  </nav>
 
 
     <div class="jumbotron text-center">
@@ -278,6 +277,18 @@ $(document).ready(function(){
   function animate(x){
       x.viewport
   }
+ </script>
+ <script>
+ 	window.onscroll = function(){
+ 		onScrollFunction()
+ 	};
+ 	function onScrollFunction(){
+ 		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+     		document.getElementById("navbar1").style.top = "0";
+   		} else {
+     		document.getElementById("navbar1").style.top = "0px";
+   		}
+ 	}
  </script>
  </div>
 
