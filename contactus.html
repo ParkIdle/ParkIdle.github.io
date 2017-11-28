@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html>
-<script>
-function sendEmail(){
-    var name = document.getElementById("name");
-    var surname = document.getElementById("surname");
-    var email = document.getElementById("email");
-    var organization = document.getElementById("organization");
-    var message = document.getElementById("message");
-}
-</script>
 <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
 <link rel="stylesheet" href="dev/aos-master/css/styles.css" />
 <link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
@@ -97,21 +88,21 @@ function sendEmail(){
       <div class="rows">
         <div class="col-sm-6">
           <label for="exampleInputEmail1">Mail</label>
-          <input type="Name" class="form-control" id="exampleInputEmail1" placeholder="">
+          <input type="Name" class="form-control" id="username" placeholder="">
           </div>
         </div>
         <div class="rows">
           <div class="col-sm-6">
             <div class="form-group">
               <label for="exampleInputPassword1">Secret Code</label>
-              <input type="Last_Name" class="form-control" id="exampleInputPassword1" placeholder="">
+              <input type="Last_Name" class="form-control" id="password" placeholder="">
             </div>
           </div>
         </div>
         <div class="rows">
           <div class="col-sm-5">
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-lg">Login</button>
+              <button type="button" class="btn btn-primary btn-lg" onClick="validate();">Login</button>
             </div>
           </div>
         </div>
@@ -122,6 +113,22 @@ function sendEmail(){
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Smooth Scrolling Animation -->
 <script src="dev/aos-master/dist/aos.js"></script>
+<script type="text/javascript">
+  function validate(){
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if ( username == "andrea" && password == "andrea"){
+      alert ("Login successfully");
+      window.location="userspace.html?id="+username; // Redirecting to other page.
+      return true;
+    }
+    else{
+      alert ("Wrong Credential!");
+      return false;
+        }
+      }
+</script>
+
 <script>
   AOS.init({
     offset: 80,
