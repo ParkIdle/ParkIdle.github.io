@@ -160,6 +160,30 @@
 	</div>
 </div>
 
+<div class="container-fluid">
+   <div class="row"  style="padding:100px 100px 140px 100px;">
+		<div class="col-sm-4">
+			<div class="thumbnail">
+				<img id="ValerioImmagine"
+				 class="img-thumbnail"
+				 src="res/valerio.jpg"
+				 width="100%"
+				 onscroll="nextStaffa"
+				 onmouseover="CambioValerio(this)"
+				 onmouseout="BackValerio(this)">
+			</div>
+		</div>
+        <div class="col-sm-8" data-aos="fade-left">
+            <div class=" text-center padded-text">
+                <h3>Valerio Ferrari</h3>
+            </div>
+            <div style="padding:0px 0px 0px 50px">
+                <h6>Graphic Designer, thank him if we look soo smooth.</h6>
+            </div>
+            <h6></h6>
+        </div>
+    </div>
+</div>
 <style>
 
     .padded-text{
@@ -273,6 +297,12 @@ $(document).ready(function(){
   }
   function BackSilvestri(x){
     x.src = "res/silvestri.jpg";
+  }
+  function CambioValerio(x){
+    x.src = "res/valerio2.jpg";
+  }
+  function BackValerio(x){
+    x.src = "res/valerio.jpg";
   }
 
   function animate(x){
