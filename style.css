@@ -124,6 +124,7 @@ body {
 }
 
 /*@@@@ CONTACT US @@@@*/
+<<<<<<< HEAD
 
 .faq {
     width: 450px;
@@ -131,6 +132,8 @@ body {
     float:right;
 }
 
+=======
+>>>>>>> parent of bb6f2ca... Prova FAQ 2
 .contactus {
     width: 450px;
     height: 415px;
