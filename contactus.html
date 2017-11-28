@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-<script>
-function sendEmail(){
-    var name = document.getElementById("name");
-    var surname = document.getElementById("surname");
-    var email = document.getElementById("email");
-    var organization = document.getElementById("organization");
-    var message = document.getElementById("message");
-}
-</script>
-<link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
+<head>
+	 <title>Parkidle - Betatesting Program</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ </head>
+
+ <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
 <link rel="stylesheet" href="dev/aos-master/css/styles.css" />
 <link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
@@ -25,30 +23,43 @@ function sendEmail(){
 <body>
 <!-- Content will go here -->
 <!-- Navigation -->
-		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-left" id="bs-example-navbar-collapse-1">
-			<div class="container-fluid">
-				<ul class="nav navbar-nav">
-                <a href="index.html" class="navbar-left"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: 5px; margin-right: 10px;"></a>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="whoweare.html">Who we are</a></li>
-                <li><a href="project.html">Our project</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="contactus.html" style="border-bottom: 4px solid #8EC449;">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Documentation</a></li>
-						<li><a href="#">Presentation</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">GitHub Project Folder</a></li>
-					</ul>
-                    <li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
-                    <li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
-				</ul>
-			</div>
-		</nav>
+<nav class="navbar navbar-inverse" id="navbar1" style="position:fixed; width:100%; z-index:1;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+	  	<div class="container-fluid">
+    		<ul class="nav navbar-nav">
+        		<a href="index.html" class="navbar-left"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: 5px; margin-right: 10px;"></a>
+              	<li><a class="underline-from-left" href="index.html">Home</a></li>
+              	<li><a class="underline-from-left" href="whoweare.html">Who we are</a></li>
+              	<li><a class="underline-from-left" href="project.html">Our project</a></li>
+              	<li><a class="underline-from-left" href="faq.html" >FAQ</a></li>
+    		</ul>
+    		<ul class="nav navbar-nav navbar-right">
+				<li class="hidden-xs"><a href="https://github.com/lim996/parkidle"><img src="res/github-light-120px.png" style="width:20%; float:right;"/></a></li>
+         		<li class="sottolineata"><a class="underline-from-left" href="contactus.html">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
+            	<li class="dropdown">
+              	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+              	<ul class="dropdown-menu">
+                	<li><a href="#">Documentation</a></li>
+                	<li><a href="#">Presentation</a></li>
+                	<li role="separator" class="divider"></li>
+                	<li><a href="#">GitHub Project Folder</a></li>
+      			</ul>
+                	<li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
+                	<li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
+    		</ul>
+  		</div>
+	</div>
+  </div>
+</nav>
 	<div class="container" style="padding:100px 0 140px 0;">
 
     <div class="jumbotron" style="background-color: rgba(197, 217, 234,0);" data-aos="zoom-out">
@@ -57,18 +68,19 @@ function sendEmail(){
           <h5>*don't worry, we won't spam you too much*</h5>
     </div>
 	<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.8);" data-aos="fade-up">
-	<form>
+
+	<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwgbqTI6YeY7fcmsnsDAnqUul-dRP7Il9b1guVswP330VUboRQ/exec">
 	  <div class="form-group">
 		<label for="exampleInputEmail1">Name</label>
-		<input type="Name" class="form-control" id="exampleInputEmail1" placeholder="">
+		<input type="text" class="form-control" id="nome" placeholder="">
 	  </div>
 	  <div class="form-group">
 		<label for="exampleInputPassword1">Last Name</label>
-		<input type="Last_Name" class="form-control" id="exampleInputPassword1" placeholder="">
+		<input type="text" class="form-control" id="last_name" placeholder="">
 	  </div>
 	  	<div class="form-group">
 		<label for="exampleInputEmail1">Email</label>
-		<input type="Email" class="form-control" id="exampleInputEmail1" placeholder="example@mailprovider.com">
+		<input type="text" class="form-control" id="email" placeholder="example@mailprovider.com">
 	  </div>
 	  <div class="form-group">
           <h3> i want to receive updates and news for:</h3>
@@ -77,22 +89,68 @@ function sendEmail(){
       </div>
 	  <div class="form-group">
 	  	<label for="exampleInputEmail1">Message:</label>
-		<textarea class="form-control" rows="5"></textarea>
+		<textarea type="text" class="message" id="message" rows="5"></textarea>
 	  </div>
       <div class="form-group">
 	  <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-  </div>
-  </div>
+  	</div>
 
 	</form>
-	</div>
+</div>
 
 
-	</div>
+
+
+  <div class="jumbotron" style="background-color: rgba(197, 217, 234,0);" data-aos="fade-up">
+
+    <h1>Already subscribed?</h1>
+    <p>Login here with the secret code we sent you!</p>
+  <form>
+    <div class="form-group">
+      <div class="rows">
+        <div class="col-sm-6">
+          <label for="exampleInputEmail1">Mail</label>
+          <input type="Name" class="form-control" id="username" placeholder="">
+          </div>
+        </div>
+        <div class="rows">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Secret Code</label>
+              <input type="Last_Name" class="form-control" id="password" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="rows">
+          <div class="col-sm-5">
+            <div class="form-group">
+              <button type="button" class="btn btn-primary btn-lg" onClick="validate();">Login</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Smooth Scrolling Animation -->
 <script src="dev/aos-master/dist/aos.js"></script>
+<script type="text/javascript">
+  function validate(){
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if ( username == "andrea" && password == "andrea"){
+      alert ("Login successfully");
+      window.location="userspace.html?id="+username; // Redirecting to other page.
+      return true;
+    }
+    else{
+      alert ("Wrong Credential!");
+      return false;
+        }
+      }
+</script>
+
 <script>
   AOS.init({
     offset: 80,
@@ -100,6 +158,18 @@ function sendEmail(){
     duration: 600,
     easing: 'ease-in-out'
   });
+</script>
+<script>
+	window.onscroll = function(){
+		onScrollFunction()
+	};
+	function onScrollFunction(){
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    		document.getElementById("navbar1").style.top = "0";
+  		} else {
+    		document.getElementById("navbar1").style.top = "0px";
+  		}
+	}
 </script>
 </body>
 </html>

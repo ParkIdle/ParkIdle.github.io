@@ -2,43 +2,14 @@
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
+@media (min-width:992px) {
+    body {padding-top:HEIGHTOFNAVBAR}
+    .navbar-static-top {position:fixed;top:0;right:0;left:0;}
 
-.topNav {
-    background: rgba(204, 204, 204, 0.5);
-    margin: 0 0 1em 0;
-    padding: 0;
-    border-bottom: 2px solid rgba(126, 159, 176,0.4);
-    overflow:hidden;
-    width: 100%;
 }
 
 .trans-bg{
         background: rgba(200, 54, 54,0.5);
-}
-
-.topNav a {
-    float: left;
-    display:flow-root;
-    font-family:sans-serif;
-    text-decoration: none;
-    color: rgb(126, 159, 176);
-    font-weight:900;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 18px;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
-}
-
-
-.topNav a:hover {
-    background: rgba(114, 224, 58,0.5);
-    color: rgb(126, 159, 176);
-    opacity: 0,8;
-}
-
-.topNav a.active {
-    background-color: yellow;
-    color: purple;
 }
 
 .immaginePresentazione {
@@ -48,22 +19,64 @@
   position: sticky;
 }
 
-.parkidle_button{
-border-radius: 10px;
+/* Animazione pulsante parkidle */
+.parkidle_button {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.parkidle_button:hover, .parkidle_button:focus, .parkidle_button:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.parkidle_button:hover {
-  background-color: #3a3b3d
+/* Animazione per sottolineare in Navbar */
+.sottolineata{
+  border-bottom: 4px solid #8EC449;
+  height: 50px;
+  margin-right: 4px;
+  margin-left: 4px;
+
 }
 
-.parkidle_button:active {
-  background-color:#3a3b3d;
-  box-shadow: 0 5px #666;
-  transform: translateX(4px;
+/* Underline From Left */
+.underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
 }
+.underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #8EC449;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline-from-left:hover:before, .underline-from-left:focus:before, .underline-from-left:active:before {
+  right: 0;
+}
+
 
 /*@@@@ Who we Are @@@@*/
-
 .container-fluid h3{
     font-family: "Exo 2",serif;
     font-size: 40px;
@@ -125,6 +138,16 @@ body {
 }
 
 /*@@@@ CONTACT US @@@@*/
+<<<<<<< HEAD
+
+.faq {
+    width: 450px;
+    height: 415px;
+    float:right;
+}
+
+=======
+>>>>>>> parent of bb6f2ca... Prova FAQ 2
 .contactus {
     width: 450px;
     height: 415px;

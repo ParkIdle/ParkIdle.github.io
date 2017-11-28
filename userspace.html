@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>Parkidle - Betatesting Program</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
+<link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:100" />
+<link rel="stylesheet" href="style.css">
+<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+<body onLoad="getQueryVariable('id')">
+<!-- Navigation -->
+
+<script>
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){
+
+                 var nam = pair[1];
+                 nam = nam[0].toUpperCase()+nam.substring(1)
+                 nam[0] = nam[0].toUpperCase()
+                 document.getElementById("username_nav").innerHTML = "<li><a href='#' style='color: #FFFFFF; pointer-events: none; cursor: default;'> Hi "+ nam + " !<span class='sr-only'>(current)</span></a></li>";}
+                 document.getElementById("intro_jumbo").innerHTML = "<div class='container_img'><div id='intro_jumbo' style='padding:100px 100px 140px 100px;' class='jumbotron'> <h1>Welcome Back,<br>"+ nam + " :)</h1></div></div>";}
+
+       }
+</script>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="#"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: -10px; margin-right: -10px;"></a>
+	</div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+	  <div class="container-fluid">
+	<ul class="nav navbar-nav">
+			  <li><a href="index.html">Home</a></li>
+			  <li><a href="whoweare.html">Who we are</a></li>
+			  <li><a href="#">Our project</a></li>
+			  <li><a href="faq.html">FAQ</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+			  <li class="active"><a href="#" style="border-bottom: 4px solid #8EC449; color: #FFFFFF;" id="username_nav"></a></li>
+			  <li><a href="contactus.html">Join us as Betatester!</a></li>
+			  <li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+				<li><a href="#">Documentation</a></li>
+				<li><a href="#">Presentation</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="#">GitHub Project Folder</a></li>
+	  </ul>
+				<li><a><img src="res/it2.png" onclick="makeItalian()"/></a></li>
+				<li><a><img src="res/en2.png" onclick="makeEnglish()"/></a></li>
+	</ul>
+  </div>
+
+	</div>
+  </div>
+</nav>
+
+    <div  id="intro_jumbo" class="jumbotron">
+    </div>
+
+    <script src="bootstrap/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Smooth Scrolling Animation -->
+    <script src="dev/aos-master/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        offset: 80,
+        once: true,
+        duration: 600,
+        easing: 'ease-in-out'
+      });
+    </script>
+    </body>
+    </html>
