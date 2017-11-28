@@ -2,14 +2,6 @@
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
-@media (max-width: 768px) {
-html, body {
-width: auto !important;
-overflow-x: hidden !important;
-}
-}
-
-
 .topNav {
     background: rgba(204, 204, 204, 0.5);
     margin: 0 0 1em 0;
