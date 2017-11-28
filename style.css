@@ -131,7 +131,7 @@ body {
     margin: 0px;
     border: 0px;
     /*background-color: white;*/
-    background-image: url("res/sfondo.jpg");
+    background-image: url("res/colors.jpg");
     background-attachment: fixed;
     background-size: cover;
     scroll-behavior: auto;
