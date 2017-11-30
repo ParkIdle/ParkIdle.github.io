@@ -112,16 +112,18 @@
 			</div>
 		</div>
 
-        <div class="container" id="wannahelp" data-aos="fade-in">
+        <div class="container" id="wannahelp" data-aos="fade-in" style="position:relative;">
             <h1 id="title">Wanna help the parking community?</h1>
             <p id="help">Just install our widget, and let the app be always on.<br />
                 It communicate with our system, helping other people to find an empty parking spot!
             </p>
             <div class="buttons">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Android</a>
-                <a class="btn btn-primary btn-lg" href="#" role="button">iOS</a>
-            </div>
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#androidModal">Android</button>
+  				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#iOSModal">iOS</button>
+			</div>
+		</div>
         </div>
+    </div>
 
 <script src="dev/aos-master/dist/aos.js"></script>
 <!-- Smooth Scrolling Animation -->
@@ -149,4 +151,43 @@
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
+<!-- Android Modal -->
+<div class="modal fade" id="androidModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h4 class="modal-title">How to install widgets on Android</h4>
+	  </div>
+	  <div class="modal-body">
+		<p></p>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	  </div>
+	</div>
+  </div>
+</div>
+<!-- iOS Modal -->
+<div class="modal fade" id="iOSModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h4 class="modal-title">How to install widgets on iOS</h4>
+	  </div>
+	  <div class="modal-body">
+		 <ul class="list-group">
+  	  		<li class="list-group-item"><b>1.</b> Swipe right over the Home screen or Lock screen.</li>
+  			<li class="list-group-item"><b>2.</b> Scroll to the bottom and tap Edit.</li>
+  			<li class="list-group-item"><b>3.</b> To add a widget, tap <b>+</b>. To remove a widget, tap <b>-</b>.<br />&nbsp;&nbsp;&nbsp; To reorder your widgets, touch and hold next to the apps and drag them in the order that you want.</li>
+			<li class="list-group-item"><b>4.</b> To finish, tap Done.</li>
+		</ul>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	  </div>
+	</div>
+  </div>
+</div>
 </html>
