@@ -20,7 +20,7 @@
     <![endif]-->
 <body onLoad="getQueryVariable('id')">
 <!-- Navigation -->
-
+<script src="login.js"></script>
 <script>
 function getQueryVariable(variable)
 {
@@ -48,8 +48,6 @@ function getQueryVariable(variable)
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  
-	  <a class="navbar-brand" href="#"><img class="parkidle_button" src="res/parkidleBianco.png" style="max-width:130px; margin-top: -10px; margin-right: -10px;"></a>
 	</div>
 	<div class="collapse navbar-collapse" id="myNavbar">
 	  <div class="container-fluid">
@@ -61,6 +59,7 @@ function getQueryVariable(variable)
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
 			  <li class="active"><a href="#" style="border-bottom: 4px solid #8EC449; color: #FFFFFF;" id="username_nav"></a></li>
+			  <li><button type="button" class="btn .btn-success btn-lg" data-toggle="modal" data-target="#LoginModal" style="margin-top: 5px; margin-left: 5px;">Login</button></li>
 			  <li><a href="contactus.html">Join us as Betatester!</a></li>
 			  <li class="dropdown">
 			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>

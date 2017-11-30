@@ -44,6 +44,7 @@
     		</ul>
     		<ul class="nav navbar-nav navbar-right">
 				<li class="hidden-xs" id="showMobile"><a href="https://github.com/lim996/parkidle"><img src="res/github-light-120px.png" style="width:20%; float:right;"/></a></li>
+				<li><button type="button" class="btn .btn-success btn-lg" data-toggle="modal" data-target="#LoginModal" style="margin-top: 5px; margin-left: 5px;">Login</button></li>
          		<li class="sottolineata"><a class="underline-from-left" href="contactus.html">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
             	<li class="dropdown">
               	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
@@ -100,56 +101,48 @@
 
 
 
+<!--login modal-->
 
-  <div class="jumbotron" style="background-color: rgba(197, 217, 234,0);" data-aos="fade-up">
-
-    <h1>Already subscribed?</h1>
-    <p>Login here with the secret code we sent you!</p>
-  <form>
-    <div class="form-group">
-      <div class="rows">
-        <div class="col-sm-6">
-          <label for="exampleInputEmail1">Mail</label>
-          <input type="Name" class="form-control" id="username" placeholder="">
-          </div>
-        </div>
-        <div class="rows">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="exampleInputPassword1">Secret Code</label>
-              <input type="Last_Name" class="form-control" id="password" placeholder="">
-            </div>
-          </div>
-        </div>
-        <div class="rows">
-          <div class="col-sm-5">
-            <div class="form-group">
-              <button type="button" class="btn btn-primary btn-lg" onClick="validate();">Login</button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+<div class="modal fade" id="LoginModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		<h4 class="modal-title">Login</h4>
+	  </div>
+	  <div class="modal-body">
+		  <form>
+		      <div class="rows">
+		        <div class="col-sm-6">
+		          <label for="exampleInputEmail1">Mail</label>
+		          <input type="Name" class="form-control" id="username" placeholder="">
+		          </div>
+		        </div>
+		          <div class="col-sm-6">
+		            <div class="form-group">
+		              <label for="exampleInputPassword1">Secret Code</label>
+		              <input type="Last_Name" class="form-control" id="password" placeholder="">
+		            </div>
+		          </div>
+		        <div class="row">
+		          <div class="col-sm-5">
+		            <div class="form-group">
+		              <button type="button" class="btn btn-primary btn-lg" onClick="validate();">Login</button>
+		            </div>
+		          </div>
+			  </div>
+		   </form>
+	   </div>
+	  </div>
+	  <div class="modal-footer">
+	  </div>
+	</div>
   </div>
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Smooth Scrolling Animation -->
 <script src="dev/aos-master/dist/aos.js"></script>
-<script type="text/javascript">
-  function validate(){
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    if ( username == "andrea" && password == "andrea"){
-      alert ("Login successfully");
-      window.location="userspace.html?id="+username; // Redirecting to other page.
-      return true;
-    }
-    else{
-      alert ("Wrong Credential!");
-      return false;
-        }
-      }
-</script>
+<script src="login.js"></script>
 
 <script>
   AOS.init({
