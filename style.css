@@ -11,6 +11,11 @@
   #showMobile { display: block; }  /* show it on small screens */
 }
 
+@font-face {
+    font-family: "Exo 2";
+    src: url("res/fonts/Exo2-Thin.otf") format("opentype");
+}
+
 .trans-bg{
         background: rgba(200, 54, 54,0.5);
 }
@@ -103,7 +108,6 @@
   font-weight: bolder;
 }
 
-
 .domande{
     font-family: "Exo 2",serif;
     background: rgba(197, 217, 234,0.5);
@@ -138,14 +142,6 @@ body {
 }
 
 /*@@@@ CONTACT US @@@@*/
-<<<<<<< HEAD
-
-.faq {
-    width: 450px;
-    height: 415px;
-    float:right;
-}
-
 .contactus {
     width: 450px;
     height: 415px;
