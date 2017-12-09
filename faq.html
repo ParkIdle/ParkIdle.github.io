@@ -27,7 +27,6 @@
 <!-- Bootstrap -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<link rel="stylesheet" href="dev/aos-master/css/styles.css" />
 <link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
 
 
@@ -119,33 +118,33 @@
 			<h4 class="modal-title">Login</h4>
 		  </div>
 		  <div class="modal-body">
-			  <form>
-			      <div class="rows">
-			        <div class="col-sm-6">
-			          <label for="exampleInputEmail1">Mail</label>
-			          <input type="Name" class="form-control" id="username" placeholder="">
-			          </div>
+			  <form method="POST" action="http://127.0.0.1:3000/login">
+			      	<div class="rows">
+			        	<div class="col-sm-6">
+			          		<label for="exampleInputEmail1">Username</label>
+			          		<input name="username" type="Name" class="form-control" id="username" placeholder="">
+			          	</div>
 			        </div>
-			          <div class="col-sm-6">
-			            <div class="form-group">
-			              <label for="exampleInputPassword1">Secret Code</label>
-			              <input type="Last_Name" class="form-control" id="password" placeholder="">
+			        <div class="col-sm-6">
+			       		<div class="form-group">
+			              	<label for="exampleInputPassword1">Password</label>
+			              	<input name="password" type="Last_Name" class="form-control" id="password" placeholder="">
 			            </div>
-			          </div>
-			        <div class="row">
-			          <div class="col-sm-5">
-			            <div class="form-group">
-			              <button type="button" class="btn btn-primary btn-lg" onClick="validate();">Login</button>
-			            </div>
-			          </div>
-				  </div>
+			  		</div>
+			       	<div class="row">
+			          	<div class="col-sm-5">
+			            	<div class="form-group">
+			              		<button type="submit" class="btn btn-primary btn-lg">Login</button>
+			            	</div>
+			          	</div>
+				  	</div>
 			   </form>
 		   </div>
 		  </div>
 		  <div class="modal-footer">
 		  </div>
 		</div>
-	  </div>
+	</div>
 
 <script src="bootstrap/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>

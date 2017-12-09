@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
 
 var app = express();
+app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -63,12 +64,14 @@ function register(body){
 app.post('/register', function (req, res) {
     if(register(req.body) == true){
         console.log("Registration success! Redirecting to homepage...");
-        res.send('Data received:\n' + JSON.stringify(req.body));
-        //window.location.replace("index.html"); //redirect page
+        //res.send('Data received:\n' + JSON.stringify(req.body));
+        res.redirect('https://lim996.github.io/index.html'); //redirect page
     }
     else{
         console.log("Registration failed!");
-        res.send('Registration Failed!');
+        // pass a local variable to the view
+        //res.render('index', { title: 'Registration Failed', message: 'Click on the link above:' });
+        res.redirect('https://lim996.github.io/contactus.html');
         //window.location.replace("contactus.html");
     }
 });
@@ -79,13 +82,21 @@ app.post('/register', function (req, res) {
 app.post('/login', function (req, res) {
     MongoClient.connect("mongodb://simonestaffa:VqhfwYZVnY8XzEjU@parkidleusers-shard-00-00-ertqo.mongodb.net:27017,parkidleusers-shard-00-01-ertqo.mongodb.net:27017,parkidleusers-shard-00-02-ertqo.mongodb.net:27017/Users?replicaSet=ParkIdleUsers-shard-0&ssl=true&authSource=admin", function(err, db) {
         if(err) { return console.dir(err); }
-        if(db.collection.find({"username":req.body.username,"password":req.body.password}).limit(1) != null){
-            //window.location.replace(window.location.href);
-            return true;
-        }
-        console.log("Incorrect username or password");
-        db.close();
-        return false;
+        // faccio una query per vedere se esiste un record (username,password) valido
+        db.collection('utenti').find({"username":req.body.username,"password":req.body.password}).toArray(function(err,result){
+            if(err) return console.dir(err);
+            if(result.length == 0){ // se non esiste il record, l'array risultante avrà lunghezza 0
+                console.log("Incorrect username or password");
+                db.close();
+                return false;
+            }else{
+                //window.location.replace(window.location.href);
+                console.log("Successfully logged!");
+                res.redirect('https://lim996.github.io/index.html');
+                db.close();
+                return true;
+            }
+        });
     });
 });
 
