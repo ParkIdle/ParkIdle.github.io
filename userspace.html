@@ -45,7 +45,7 @@ function getQueryVariable(variable)
 <script>
 function getQueryVariable()
 {
-                 nam = store.get('user');
+                 nam = store.get('user').name;
                  nam[0] = nam[0].toUpperCase();
                  document.getElementById("username_nav").innerHTML = "<li><a href='#' style='color: #FFFFFF; pointer-events: none; cursor: default;'> Hi "+ nam + " !<span class='sr-only'>(current)</span></a></li>";
                  document.getElementById("intro_jumbo").innerHTML = "<div class='container_img'><div id='intro_jumbo' style='padding:100px 100px 140px 100px;' class='jumbotron'> <h1>Welcome Back,<br>"+ nam + " :)</h1></div></div>";

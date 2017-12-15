@@ -128,7 +128,7 @@
 <script src="login.js"></script>
 <script>
     function userConnected(){
-        var name = store.get('user');
+        var name = store.get('user').name;
         if (name != null){
             document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
         }
