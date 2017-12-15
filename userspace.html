@@ -18,7 +18,7 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-<body onLoad="getQueryVariable('id')">
+<body onLoad="getQueryVariable()">
 <!-- Navigation -->
 <script src="login.js"></script>
 
@@ -43,7 +43,7 @@ function getQueryVariable(variable)
 </script>
 -->
 <script>
-function getQueryVariable(variable)
+function getQueryVariable()
 {
                  nam = localStorage.user;
                  nam[0] = nam[0].toUpperCase();
