@@ -92,7 +92,7 @@ app.post('/login', function (req, res) {
             }else{
                 //window.location.replace(window.location.href);
                 console.log("Successfully logged!");
-                res.redirect('https://lim996.github.io/index.html');
+                res.redirect('https://lim996.github.io/userspace.html?id='+req.body.username);
                 db.close();
                 return true;
             }
