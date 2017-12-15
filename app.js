@@ -8,6 +8,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
+var store = require('store');
 
 var app = express();
 app.set("view engine", "pug");
@@ -80,7 +81,6 @@ app.post('/register', function (req, res) {
 // POST mandata dal form di Login nel modal (vedi navbar) al momento della submit, impostando action="https://localhost:3000/login"
 // TODO
 app.get('/login', function (req, res) {
-    var store = require('store');
     MongoClient.connect("mongodb://simonestaffa:VqhfwYZVnY8XzEjU@parkidleusers-shard-00-00-ertqo.mongodb.net:27017,parkidleusers-shard-00-01-ertqo.mongodb.net:27017,parkidleusers-shard-00-02-ertqo.mongodb.net:27017/Users?replicaSet=ParkIdleUsers-shard-0&ssl=true&authSource=admin", function(err, db) {
         if(err) { return console.dir(err); }
         // faccio una query per vedere se esiste un record (username,password) valido
