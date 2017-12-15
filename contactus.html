@@ -129,7 +129,16 @@
 
 
 <!--login modal-->
-
+<script>
+	function getLogin(){
+		var username = documents.loginForm.getElementById('username').value;
+		var password = documents.loginForm.getElementById('password').value;
+		var xmlHttp = new XMLHttpRequest();
+    	xmlHttp.open( "GET", "http://127.0.0.1:3000/login", false ); // false for synchronous request
+    	xmlHttp.send({'username':username,'password':password});
+    	alert(xmlHttp.responseText);
+	}
+</script>
 <div class="modal fade" id="LoginModal" role="dialog">
   <div class="modal-dialog modal-lg">
 	<div class="modal-content">
@@ -138,7 +147,7 @@
 		<h4 class="modal-title">Login</h4>
 	  </div>
 	  <div class="modal-body">
-		  <form method="POST" action="http://127.0.0.1:3000/login">
+		  <form name="loginForm"method="GET" action="http://127.0.0.1:3000/login">
 		      	<div class="rows">
 		        	<div class="col-sm-6">
 		          		<label for="exampleInputEmail1">Username</label>
@@ -154,7 +163,7 @@
 		       	<div class="row">
 		          	<div class="col-sm-5">
 		            	<div class="form-group">
-		              		<button type="submit" class="btn btn-primary btn-lg">Login</button>
+		              		<button type="button" class="btn btn-primary btn-lg" onclick="getLogin()">Login</button>
 		            	</div>
 		          	</div>
 			  	</div>

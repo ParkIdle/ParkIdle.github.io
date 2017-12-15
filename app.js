@@ -70,8 +70,8 @@ app.post('/register', function (req, res) {
     else{
         console.log("Registration failed!");
         // pass a local variable to the view
-        //res.render('index', { title: 'Registration Failed', message: 'Click on the link above:' });
-        res.redirect('https://lim996.github.io/contactus.html');
+        res.render('index', { title: 'Registration Failed', message: 'This page will redirect you in 2 seconds, if it takes too long click on the link above:' });
+        //res.redirect('https://lim996.github.io/contactus.html');
         //window.location.replace("contactus.html");
     }
 });
@@ -79,7 +79,7 @@ app.post('/register', function (req, res) {
 // stessa cosa ma in questo caso gestisco il caso del login
 // POST mandata dal form di Login nel modal (vedi navbar) al momento della submit, impostando action="https://localhost:3000/login"
 // TODO
-app.post('/login', function (req, res) {
+app.get('/login', function (req, res) {
     MongoClient.connect("mongodb://simonestaffa:VqhfwYZVnY8XzEjU@parkidleusers-shard-00-00-ertqo.mongodb.net:27017,parkidleusers-shard-00-01-ertqo.mongodb.net:27017,parkidleusers-shard-00-02-ertqo.mongodb.net:27017/Users?replicaSet=ParkIdleUsers-shard-0&ssl=true&authSource=admin", function(err, db) {
         if(err) { return console.dir(err); }
         // faccio una query per vedere se esiste un record (username,password) valido
