@@ -8,6 +8,9 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
+var store = require('store');
+
+
 
 var app = express();
 app.set("view engine", "pug");
@@ -92,7 +95,7 @@ app.get('/login', function (req, res) {
             }else{
                 //window.location.replace(window.location.href);
                 console.log("Successfully logged!");
-                localStorage.setItem("user", req.body.username);
+                store.set('user', { name:'Marcus' })
                 res.redirect('https://lim996.github.io/userspace.html');
                 db.close();
                 return true;
