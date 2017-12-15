@@ -116,6 +116,10 @@
     opacity: 0,8;
 }
 
+#navbar1{
+ border-radius: 0px;
+}
+
 .domande .question{
     font-weight: bolder;
     font-size: 40px;
