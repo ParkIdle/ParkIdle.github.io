@@ -19,7 +19,7 @@
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
 
-<body>
+<body onload="userConnected()">
 <!-- Content will go here -->
 <!-- Navigation -->
 <nav class="navbar navbar-inverse" id="navbar1" style="position:fixed; width:100%; z-index:1;">
@@ -43,7 +43,7 @@
     		</ul>
     		<ul class="nav navbar-nav navbar-right">
 				<li class="hidden-xs" id="showMobile"><a href="https://github.com/lim996/parkidle"><img src="res/github-light-120px.png" style="width:20%; float:right;"/></a></li>
-				<li><button type="button" class="btn .btn-success btn-lg btn-sm" data-toggle="modal" data-target="#LoginModal" style="margin-top: 10px; margin-right: 15px; margin-left: 5px;">Login</button></li>
+				<li id="username_nav"><button type="button"  class="btn .btn-success btn-lg btn-sm" data-toggle="modal" data-target="#LoginModal" style="margin-top: 10px; margin-right: 15px; margin-left: 5px;">Login</button></li>
 				<li><a class="underline-from-left" href="contactus.html">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
             	<li class="dropdown">
               	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
@@ -126,6 +126,15 @@
 <!-- Smooth Scrolling Animation -->
 <script src="dev/aos-master/dist/aos.js"></script>
 <script src="login.js"></script>
+<script>
+
+    function userConnected(){
+        if (localStorage.user != null){
+            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ localStorage.user + " !</a>";
+        }
+        else return;
+    }
+</script>
 <script>
   AOS.init({
     offset: 120,

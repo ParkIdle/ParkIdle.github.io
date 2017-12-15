@@ -21,6 +21,8 @@
 <body onLoad="getQueryVariable('id')">
 <!-- Navigation -->
 <script src="login.js"></script>
+
+<!--
 <script>
 function getQueryVariable(variable)
 {
@@ -31,10 +33,23 @@ function getQueryVariable(variable)
                if(pair[0] == variable){
 
                  var nam = pair[1];
-                 nam = nam[0].toUpperCase()+nam.substring(1)
-                 nam[0] = nam[0].toUpperCase()
+                 nam = nam[0].toUpperCase()+nam.substring(1);
+                 nam[0] = nam[0].toUpperCase();
+				 localStorage.setItem("user", nam);
                  document.getElementById("username_nav").innerHTML = "<li><a href='#' style='color: #FFFFFF; pointer-events: none; cursor: default;'> Hi "+ nam + " !<span class='sr-only'>(current)</span></a></li>";}
                  document.getElementById("intro_jumbo").innerHTML = "<div class='container_img'><div id='intro_jumbo' style='padding:100px 100px 140px 100px;' class='jumbotron'> <h1>Welcome Back,<br>"+ nam + " :)</h1></div></div>";}
+
+       }
+</script>
+-->
+<script>
+function getQueryVariable(variable)
+{
+                 nam = localStorage.user;
+                 nam[0] = nam[0].toUpperCase();
+                 document.getElementById("username_nav").innerHTML = "<li><a href='#' style='color: #FFFFFF; pointer-events: none; cursor: default;'> Hi "+ nam + " !<span class='sr-only'>(current)</span></a></li>";
+                 document.getElementById("intro_jumbo").innerHTML = "<div class='container_img'><div id='intro_jumbo' style='padding:100px 100px 140px 100px;' class='jumbotron'> <h1>Welcome Back,<br>"+ nam + " :)</h1></div></div>";
+
 
        }
 </script>
