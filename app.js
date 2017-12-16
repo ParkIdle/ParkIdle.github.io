@@ -80,7 +80,7 @@ app.post('/register', function (req, res) {
 // stessa cosa ma in questo caso gestisco il caso del login
 // POST mandata dal form di Login nel modal (vedi navbar) al momento della submit, impostando action="https://localhost:3000/login"
 // TODO
-app.get('/login', function (req, res) {
+app.post('/login', function (req, res) {
     MongoClient.connect("mongodb://simonestaffa:VqhfwYZVnY8XzEjU@parkidleusers-shard-00-00-ertqo.mongodb.net:27017,parkidleusers-shard-00-01-ertqo.mongodb.net:27017,parkidleusers-shard-00-02-ertqo.mongodb.net:27017/Users?replicaSet=ParkIdleUsers-shard-0&ssl=true&authSource=admin", function(err, db) {
         if(err) { return console.dir(err); }
         // faccio una query per vedere se esiste un record (username,password) valido
@@ -93,8 +93,7 @@ app.get('/login', function (req, res) {
             }else{
                 //window.location.replace(window.location.href);
                 console.log("Successfully logged!");
-                store.set('user', { name: req.body.username })
-                res.redirect('https://lim996.github.io/userspace.html');
+                res.redirect('https://lim996.github.io/user_detect.html?id='+req.body.username);
                 db.close();
                 return true;
             }
