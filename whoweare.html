@@ -21,7 +21,6 @@
 	<script>
 	    function userConnected(){
 	        var name = localStorage.getItem("user");
-			window.alert(name);
 	        if (name != null){
 	            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
 	        }
