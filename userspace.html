@@ -56,9 +56,9 @@ function getQueryVariable(){
 
 		if (localStorage.getItem("user")==null){
 			$('#notLoggedModal').modal('show');
-			setTimeout(function(){
-				window.location.replace("https://lim996.github.io/");
-			}, 2000);
+			document.getElementById("logout_jumbo").innerHTML  =  "<h1 id='logout_jumbo'> Go back to the index page! :)</h1>";
+			document.getElementById("index_button").innerHTML  =  "<a id='index_button' class='btn btn-primary btn-lg' href='https://lim996.github.io/' role='button'>Index Page</a>";
+			return;
 		}
 		else{
          nam = localStorage.getItem("user");
@@ -111,12 +111,12 @@ function getQueryVariable(){
 	<div class="container-fluid index-fluid">
 		<div class="jumbotron">
 			<div class="rows" id="logout" >
-                <div class="col-sm-12" id="title" data-aos="zoom-out">
-                	<h1>you want to signout?</h1>
+                <div  class="col-sm-12" id="title" data-aos="zoom-out">
+                	<h1 id="logout_jumbo">you want to signout?</h1>
                 </div>
             </div>
 			<div class="rows" id="logout" >
-				<div class="col-sm-4" id="title" data-aos="zoom-out">
+				<div class="col-sm-4" id="index_button" data-aos="zoom-out">
 					<a class="btn btn-primary btn-lg" href="#" onclick="logout();" role="button">Log Out</a>
 				</div>
 			</div>
