@@ -128,7 +128,7 @@
 <script src="login.js"></script>
 <script>
     function userConnected(){
-        var name = store.get('user').name;
+        var name = localStorage.getItem("user");
         if (name != null){
             document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
         }

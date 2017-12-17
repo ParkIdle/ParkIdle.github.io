@@ -22,6 +22,15 @@
 <!-- Navigation -->
 <script src="login.js"></script>
 
+<script>
+	function logout(){
+		if (localStorage.getItem("user")!=null){
+			localStorage.removeItem("user");
+		}
+		window.location ("https://lim996.github.io/");
+	}
+</script>
+
 <!--
 <script>
 function getQueryVariable(variable)
@@ -46,7 +55,6 @@ function getQueryVariable(variable)
 function getQueryVariable()
 {
                  nam = localStorage.getItem("user");
-                 nam[0] = nam[0].toUpperCase();
                  document.getElementById("username_nav").innerHTML = "<li><a href='#' style='color: #FFFFFF; pointer-events: none; cursor: default;'> Hi "+ nam + " !<span class='sr-only'>(current)</span></a></li>";
                  document.getElementById("intro_jumbo").innerHTML = "<div class='container_img'><div id='intro_jumbo' style='padding:100px 100px 140px 100px;' class='jumbotron'> <h1>Welcome Back,<br>"+ nam + " :)</h1></div></div>";
        }
@@ -88,8 +96,26 @@ function getQueryVariable()
   </div>
 </nav>
 
+<div class="container-fluid index-fluid">
     <div  id="intro_jumbo" class="jumbotron">
     </div>
+</div>
+	<div class="container-fluid index-fluid">
+		<div class="jumbotron">
+			<div class="rows" id="logout" >
+                <div class="col-sm-12" id="title" data-aos="zoom-out">
+                	<h1>you want to signout?</h1>
+                </div>
+            </div>
+			<div class="rows" id="logout" >
+				<div class="col-sm-4" id="title" data-aos="zoom-out">
+					<a class="btn btn-primary btn-lg" href="#" onclick="logout();" role="button">Log Out</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 
     <script src="bootstrap/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>

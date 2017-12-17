@@ -37,7 +37,16 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-<body>
+	<script>
+	    function userConnected(){
+	        var name = localStorage.getItem("user");
+	        if (name != null){
+	            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
+	        }
+	        else return;
+	    }
+	</script>
+<body onload="userConnected()">
 <!-- Content will go here -->
 <!-- Navigation -->
 <nav class="navbar navbar-inverse" id="navbar1" style="position:fixed; width:100%; z-index:1;">
