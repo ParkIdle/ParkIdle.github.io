@@ -51,12 +51,17 @@ function getQueryVariable(variable)
        }
 </script>
 -->
-<script>
-function getQueryVariable()
-{
-                 nam = localStorage.getItem("user");
-                 document.getElementById("username_nav").innerHTML = "<li><a href='#' style='color: #FFFFFF; pointer-events: none; cursor: default;'> Hi "+ nam + " !<span class='sr-only'>(current)</span></a></li>";
-                 document.getElementById("intro_jumbo").innerHTML = "<div class='container_img'><div id='intro_jumbo' style='padding:100px 100px 140px 100px;' class='jumbotron'> <h1>Welcome Back,<br>"+ nam + " :)</h1></div></div>";
+<script type="text/javascript">
+function getQueryVariable(){
+
+		if (localStorage.getItem("user")==null){
+			$('#notLoggedModal').modal('show');
+			return;
+		}
+         nam = localStorage.getItem("user");
+         document.getElementById("username_nav").innerHTML = "<li><a href='#' style='color: #FFFFFF; pointer-events: none; cursor: default;'> Hi "+ nam + " !<span class='sr-only'>(current)</span></a></li>";
+         document.getElementById("intro_jumbo").innerHTML = "<div class='container_img'><div id='intro_jumbo' style='padding:100px 100px 140px 100px;' class='jumbotron'> <h1>Welcome Back,<br>"+ nam + " :)</h1></div></div>";
+
        }
 </script>
 
@@ -115,6 +120,23 @@ function getQueryVariable()
 		</div>
 	</div>
 
+	<div class="modal fade" id="notLoggedModal" role="dialog">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h4 class="modal-title">Sorry, you're not logget yet!</h4>
+		  </div>
+		  <div class="modal-body">
+			  <h1>seems like you're not already logged in!<br> click the button to go back in the index page<br>
+			  <a class="btn btn-primary btn-lg" href="https://lim996.github.io/" role="button">Index Page</a>
+		  </h1>
+	  	</div>
+
+		   </div>
+		  </div>
+		  <div class="modal-footer">
+		  </div>
+		</div>
 
 
     <script src="bootstrap/jquery.js"></script>

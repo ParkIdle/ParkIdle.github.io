@@ -19,6 +19,15 @@
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
 
+<script>
+    function userConnected(){
+        var name = localStorage.getItem("user");
+        if (name != null){
+            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
+        }
+        else return;
+    }
+</script>
 <body onload="userConnected()">
 <!-- Content will go here -->
 <!-- Navigation -->
@@ -126,15 +135,6 @@
 <!-- Smooth Scrolling Animation -->
 <script src="dev/aos-master/dist/aos.js"></script>
 <script src="login.js"></script>
-<script>
-    function userConnected(){
-        var name = localStorage.getItem("user");
-        if (name != null){
-            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
-        }
-        else return;
-    }
-</script>
 <script>
   AOS.init({
     offset: 120,
