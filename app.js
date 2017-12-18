@@ -103,6 +103,8 @@ app.post('/login', function (req, res) {
 
 // imposto la porta e l'IP su cui rimango in ascolto
 //app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );
+var ip = require("ip");
+console.dir ( ip.address() );
 
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
