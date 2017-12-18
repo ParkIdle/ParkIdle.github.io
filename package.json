@@ -2,9 +2,9 @@
   "name": "lim996.github.io",
   "version": "1.0.0",
   "description": "# REGOLE DI BUON USO GITHUB 1. Prima fai PULL, poi lavori. 2. Descrivi la COMMIT con un senso. 3. Modificare possibilmente solo la propria parte di lavoro, cosi da    rendere più facile il MERGE dei file.",
-  "main": "bundle.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

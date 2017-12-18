@@ -102,4 +102,10 @@ app.post('/login', function (req, res) {
 });
 
 // imposto la porta e l'IP su cui rimango in ascolto
-app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );
+//app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );
+
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000
+var ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+app.listen(port, ip_address, function () {
+  console.log( "Listening on " + ip_address + ", port " + port )
+});
