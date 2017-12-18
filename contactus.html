@@ -94,7 +94,7 @@
     </div>
 	<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.8);" data-aos="fade-up">
 	<!-- https://script.google.com/macros/s/AKfycbwgbqTI6YeY7fcmsnsDAnqUul-dRP7Il9b1guVswP330VUboRQ/exec" -->
-	<form id="gform" method="POST" action="http://127.0.0.1:3000/register">
+	<form id="gform" method="POST" action="http://10.129.140.132:8080/register">
 	  <div class="form-group">
 		<label for="exampleInputEmail1">Name</label>
 		<input name="name" type="text" class="form-control" id="name" placeholder="" required>
@@ -143,7 +143,7 @@
 		var username = documents.loginForm.getElementById('username').value;
 		var password = documents.loginForm.getElementById('password').value;
 		var xmlHttp = new XMLHttpRequest();
-    	xmlHttp.open( "GET", "http://127.0.0.1:3000/login", false ); // false for synchronous request
+    	xmlHttp.open( "GET", "http://10.129.140.132:8080/login", false ); // false for synchronous request
     	xmlHttp.send({'username':username,'password':password});
     	alert(xmlHttp.responseText);
 	}
@@ -156,7 +156,7 @@
 		<h4 class="modal-title">Login</h4>
 	  </div>
 	  <div class="modal-body">
-		  <form name="loginForm"method="GET" action="http://127.0.0.1:3000/login">
+		  <form name="loginForm"method="GET" action="http://10.129.140.132:8080/login">
 		      	<div class="rows">
 		        	<div class="col-sm-6">
 		          		<label for="exampleInputEmail1">Username</label>
