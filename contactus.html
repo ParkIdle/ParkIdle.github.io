@@ -138,16 +138,6 @@
 
 
 <!--login modal-->
-<script>
-	function getLogin(){
-		var username = documents.loginForm.getElementById('username').value;
-		var password = documents.loginForm.getElementById('password').value;
-		var xmlHttp = new XMLHttpRequest();
-    	xmlHttp.open( "GET", "http://10.129.140.132:8080/login", false ); // false for synchronous request
-    	xmlHttp.send({'username':username,'password':password});
-    	alert(xmlHttp.responseText);
-	}
-</script>
 <div class="modal fade" id="LoginModal" role="dialog">
   <div class="modal-dialog modal-lg">
 	<div class="modal-content">
