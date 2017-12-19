@@ -1,29 +1,23 @@
 {
-  "name": "lim996.github.io",
+  "name": "server",
   "version": "1.0.0",
-  "description": "# REGOLE DI BUON USO GITHUB 1. Prima fai PULL, poi lavori. 2. Descrivi la COMMIT con un senso. 3. Modificare possibilmente solo la propria parte di lavoro, cosi da    rendere più facile il MERGE dei file.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lim996/lim996.github.io.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lim996/lim996.github.io/issues"
-  },
-  "homepage": "https://github.com/lim996/lim996.github.io#readme",
-  "dependencies": {
+  "description": "",
+  "devDependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "ip": "^1.1.5",
     "mongodb": "^2.2.33",
     "path": "^0.12.7",
-    "pug": "^2.0.0-rc.4",
     "store": "^2.0.12"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.33",
+    "pug": "^2.0.0-rc.4"
   }
 }

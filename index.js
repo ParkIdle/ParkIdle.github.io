@@ -71,7 +71,7 @@ app.post('/register', function (req, res) {
     else{
         console.log("Registration failed!");
         // pass a local variable to the view
-        res.render('index', { title: 'Registration Failed', message: 'This page will redirect you in 2 seconds, if it takes too long click on the link above:' });
+        res.render('index', { title: 'Registration Failed', message: 'Registration Failed! This page will redirect you in 2 seconds, if it takes too long click on the link above:' });
         //res.redirect('https://lim996.github.io/contactus.html');
         //window.location.replace("contactus.html");
     }
@@ -93,7 +93,7 @@ app.post('/login', function (req, res) {
                 return false;
             }else{
                 //window.location.replace(window.location.href);
-                console.log("Successfully logged!");
+                console.log(req.body.username + ": Successfully logged!");
                 res.redirect('https://lim996.github.io/user_detect.html?id='+req.body.username);
                 db.close();
                 return true;
@@ -102,6 +102,10 @@ app.post('/login', function (req, res) {
     });
 });
 
+app.get('/', (req, res) => {
+  res.send('HEY!')
+})
+
 // imposto la porta e l'IP su cui rimango in ascolto
 //app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );
 var ip = require("ip");
@@ -109,6 +113,6 @@ console.dir ( ip.address() );
 
 var port = process.env.port || 8080
 var ip_address = process.env.ip || '0.0.0.0'
-app.listen(3000,ip_address, function () {
+app.listen(3000, function () {
   console.log( "Listening on " + ip_address + ", port " + port )
 });
