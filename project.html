@@ -19,8 +19,10 @@
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
 	<script>
+		// check se sei gia connesso
 	    function userConnected(){
 	        var name = localStorage.getItem("user");
+			// se sono connesso switcho Login con il mio username
 	        if (name != null){
 	            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
 	        }
@@ -182,6 +184,7 @@
 		</div>
 
 <script src="bootstrap/jquery.js"></script>
+// script che gestisce la rappresentazione del grafico a torta
 <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
 		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
@@ -286,6 +289,7 @@ zingchart.render({
   });
 </script>
 <script>
+	// gestione parallax della navbar
 	window.onscroll = function(){
 		onScrollFunction()
 	};
