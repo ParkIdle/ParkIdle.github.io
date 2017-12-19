@@ -88,6 +88,7 @@ app.post('/login', function (req, res) {
             if(err) return console.dir(err);
             if(result.length == 0){ // se non esiste il record, l'array risultante avrà lunghezza 0
                 console.log("Incorrect username or password");
+                res.redirect('https://lim996.github.io/user_detect.html?id='+'null');
                 db.close();
                 return false;
             }else{

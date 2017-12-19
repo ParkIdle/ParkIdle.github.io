@@ -9,6 +9,11 @@
                     var pair = vars[i].split("=");
                     if(pair[0] == variable){
                       var nam = pair[1];
+                      if (nam == 'null'){
+                          window.alert("Username or Password wrong!");
+                          window.location.replace ("https://lim996.github.io");
+                          return;
+                      }
                       localStorage.setItem("user", nam);
                       window.location.replace ("https://lim996.github.io/userspace.html");
                       return;
