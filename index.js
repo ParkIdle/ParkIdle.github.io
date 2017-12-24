@@ -16,7 +16,17 @@ app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// File Log util
+var fs = require('fs');
+var util = require('util');
+var log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'a'});
+var log_stdout = process.stdout;
 
+console.log = function(d) { //
+	var datetime = new Date();
+	log_file.write('[' + datetime + ']' + util.format(d) + '\n');
+	log_stdout.write(util.format(d) + '\n');
+};
 /* * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * *                 [MQTT]                  * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * */

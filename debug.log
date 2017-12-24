@@ -1,0 +1,6 @@
+[Sun Dec 24 2017 15:36:21 GMT+0100 (CET)][MAIN] Listening on 0.0.0.0, port 3000
+[Sun Dec 24 2017 15:36:21 GMT+0100 (CET)][MQTT] Connecting to cloudmqtt...
+[Sun Dec 24 2017 15:36:21 GMT+0100 (CET)][MQTT] Succesfully connected to cloudmqtt
+[Sun Dec 24 2017 15:39:29 GMT+0100 (CET)][MAIN] Listening on 0.0.0.0, port 3000
+[Sun Dec 24 2017 15:39:30 GMT+0100 (CET)][MQTT] Connecting to cloudmqtt...
+[Sun Dec 24 2017 15:39:30 GMT+0100 (CET)][MQTT] Succesfully connected to cloudmqtt
