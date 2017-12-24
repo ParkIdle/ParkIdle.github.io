@@ -164,7 +164,7 @@ app.post('/pioevent', function (req, res) {
 		client.publish('server/arrival',event_string);
 	}
 	// Writing on MongoDB 'events' collection
-	MongoClient.connect("mongodb://simonestaffa:VqhfwYZVnY8XzEjU@parkidleusers-shard-00-00-ertqo.mongodb.net:27017,parkidleusers-shard-00-01-ertqo.mongodb.net:27017,parkidleusers-shard-00-02-ertqo.mongodb.net:27017/Users?replicaSet=ParkIdleUsers-shard-0&ssl=true&authSource=admin", function(err, db) {
+	MongoClient.connect("mongodb://simonestaffa:VqhfwYZVnY8XzEjU@parkidleusers-shard-00-00-ertqo.mongodb.net:27017,parkidleusers-shard-00-01-ertqo.mongodb.net:27017,parkidleusers-shard-00-02-ertqo.mongodb.net:27017/Events?replicaSet=ParkIdleUsers-shard-0&ssl=true&authSource=admin", function(err, db) {
       	if(err) { return console.dir(err); }
       	console.log('[PIOEVENT_HANDLER] Connected to MongoDB');
       	// scelgo la collection in cu inserire (es. 'utenti')
