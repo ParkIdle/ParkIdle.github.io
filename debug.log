@@ -1,6 +1,24 @@
-[Sun Dec 24 2017 15:36:21 GMT+0100 (CET)][MAIN] Listening on 0.0.0.0, port 3000
-[Sun Dec 24 2017 15:36:21 GMT+0100 (CET)][MQTT] Connecting to cloudmqtt...
-[Sun Dec 24 2017 15:36:21 GMT+0100 (CET)][MQTT] Succesfully connected to cloudmqtt
-[Sun Dec 24 2017 15:39:29 GMT+0100 (CET)][MAIN] Listening on 0.0.0.0, port 3000
-[Sun Dec 24 2017 15:39:30 GMT+0100 (CET)][MQTT] Connecting to cloudmqtt...
-[Sun Dec 24 2017 15:39:30 GMT+0100 (CET)][MQTT] Succesfully connected to cloudmqtt
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MAIN] Listening on 0.0.0.0, port 3000
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MAIN] Listening on 0.0.0.0, port 3000
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Connecting to cloudmqtt...
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Connecting to cloudmqtt...
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Succesfully connected to cloudmqtt
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Succesfully connected to cloudmqtt
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MAIN] Listening on 0.0.0.0, port 3000
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MAIN] Listening on 0.0.0.0, port 3000
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Connecting to cloudmqtt...
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Connecting to cloudmqtt...
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Succesfully connected to cloudmqtt
+[Sun Dec 24 2017 14:40:40 GMT+0000 (UTC)][MQTT] Succesfully connected to cloudmqtt
+[Sun Dec 24 2017 14:44:44 GMT+0000 (UTC)][PIOEVENT_HANDLER] Received post in /pioevent
+[Sun Dec 24 2017 14:44:44 GMT+0000 (UTC)][PIOEVENT_HANDLER] Publishing on topic -> server/departed
+[Sun Dec 24 2017 14:44:44 GMT+0000 (UTC)][PIOEVENT_HANDLER] Connected to MongoDB
+[Sun Dec 24 2017 14:44:45 GMT+0000 (UTC)][PIOEVENT_HANDLER] Insert Completed!
+[Sun Dec 24 2017 14:45:45 GMT+0000 (UTC)][PIOEVENT_HANDLER] Received post in /pioevent
+[Sun Dec 24 2017 14:45:45 GMT+0000 (UTC)][PIOEVENT_HANDLER] Publishing on topic -> server/departed
+[Sun Dec 24 2017 14:45:46 GMT+0000 (UTC)][PIOEVENT_HANDLER] Connected to MongoDB
+[Sun Dec 24 2017 14:45:46 GMT+0000 (UTC)][PIOEVENT_HANDLER] Insert Completed!
+[Sun Dec 24 2017 14:46:14 GMT+0000 (UTC)][PIOEVENT_HANDLER] Received post in /pioevent
+[Sun Dec 24 2017 14:46:14 GMT+0000 (UTC)][PIOEVENT_HANDLER] Publishing on topic -> server/departed
+[Sun Dec 24 2017 14:46:15 GMT+0000 (UTC)][PIOEVENT_HANDLER] Connected to MongoDB
+[Sun Dec 24 2017 14:46:15 GMT+0000 (UTC)][PIOEVENT_HANDLER] Insert Completed!
