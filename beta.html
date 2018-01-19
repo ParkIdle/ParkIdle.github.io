@@ -1,51 +1,33 @@
 <!DOCTYPE html>
 <html>
+<head>
+	 <title>Parkidle - Beta</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ </head>
+<link rel="stylesheet" href="dev/aos-master/dist/aos.css" />
 <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
 <link rel="stylesheet" href="style.css">
-<!-- Bootstrap -->
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<script>
-	// funzione che controlla se nel form sono stati messi dei dati in input
-	function hasData(){
-		var elements = document.getElementById("gform").elements;
-		for (var i = 0; i < elements.length; i++) {
-    		if(elements[i].type != 'checkbox' && elements[i].type != 'date' && elements[i].value != ''){
-        		return true
-			}
-		}
-		return false;
-	}
-	// funzione chiamata all'uscita dalla pagina
-	window.onbeforeunload = function(){
-		if(hasData() == true){ // se ci sono dati comparirà un popup di conferma di uscita
-			return "Are you sure to leave this page?";
-		}
-		//localStorage.setItem('name',document.gform.getElementByID('name').value);
-	}
-	/*window.onload = function(e){
-		document.gform.getElementById('name').value = localStorage.getItem('name');
-	}*/
-</script>
-<head>
-	<title>Parkidle - Betatesting Program</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-	<script>
-	    function userConnected(){
-	        var name = localStorage.getItem("user");
-	        if (name != null){
-	            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
-	        }
-	        else return;
-	    }
-	</script>
+
+<script>
+    function userConnected(){
+        var name = localStorage.getItem("user");
+        if (name != null){
+            document.getElementById("username_nav").innerHTML = "<a class='underline-from-left' href='userspace.html'> Hi "+ name + " !</a>";
+        }
+        else return;
+    }
+</script>
 <body onload="userConnected()">
 <!-- Content will go here -->
 <!-- Navigation -->
@@ -63,7 +45,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
 	  	<div class="container-fluid">
     		<ul class="nav navbar-nav">
-              	<li><a class="underline-from-left" href="index.html">Home</a></li>
+              	<li class="sottolineata"><a class="underline-from-left" href="index.html">Home</a></li>
               	<li><a class="underline-from-left" href="whoweare.html">Who we are</a></li>
               	<li><a class="underline-from-left" href="project.html">Our project</a></li>
               	<li><a class="underline-from-left" href="faq.html" >FAQ</a></li>
@@ -71,8 +53,8 @@
     		<ul class="nav navbar-nav navbar-right">
 				<li class="hidden-xs" id="showMobile"><a href="https://github.com/ParkIdle/ParkIdle-Android"><img src="res/github-light-120px.png" style="width:20%; float:right;"/></a></li>
 				<li id="username_nav"><button type="button"  class="btn .btn-success btn-lg btn-sm" data-toggle="modal" data-target="#LoginModal" style="margin-top: 10px; margin-right: 15px; margin-left: 5px;">Login</button></li>
-				<li><a class="sottolineata" href="contactus.html">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
-				<li class="dropdown">
+				<li><a class="underline-from-left" href="contactus.html">Join us as Betatester!<span class="sr-only">(current)</span></a></li>
+            	<li class="dropdown">
               	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
               	<ul class="dropdown-menu">
                 	<li><a href="https://github.com/ParkIdle/ParkIdle-Android/wiki">Documentation</a></li>
@@ -85,35 +67,38 @@
 	</div>
   </div>
 </nav>
-<div class="container-fluid">
-    <div class="jumbotron" style="background-color: rgba(197, 217, 234,0);" data-aos="zoom-out">
-		<h1>
-			<a href="project-it.html">What is ParkIdle?</a>
-		</h1>
-		<br/>
-		<h1>Wanna join the revolution?<br /> Wanna be one of the first ParkIdle user?
-		<p>Check these surveys:</p>
-		</h1>
-		<p>
-		(if you already completed the 1st one, please complete only the 2nd one)
-		</p>
-		<h3>
-		  <li>
-			<a href="https://docs.google.com/forms/d/e/1FAIpQLSeScXcem7QOvUHpFvspd0Cj2tmfEMLlCxuZcrXWYDh3S0HyYA/viewform?usp=sf_link">The Parking Problem (1st one)</a>
-		  </li>
-		  <li>
-			<a href="https://docs.google.com/forms/d/e/1FAIpQLSd_MkbqVG0GYemKIIGn-eW6jiUWDMSSdRxE1OM5WKwMwJ4JLA/viewform?usp=sf_link">Beta Survey (2nd one)</a>
-		  </li>
-		</h3>
-    </div>
-	<div class="jumbotron" style="background-color: rgba(197, 217, 234,0.5);">
-		 <h1><b>ParkIdle Beta Version</b>:</h1>
-		 <br />
-		 <h3>Check this page, Google Play Store link coming soon here!</h3>
-	</div>
-</div>
 
+
+
+<script src="dev/aos-master/dist/aos.js"></script>
+<!-- Smooth Scrolling Animation -->
+<script src="dev/aos-master/dist/aos.js"></script>
+<script src="login.js"></script>
+<script>
+  AOS.init({
+    offset: 120,
+    duration: 900,
+    once: true,
+    easing: 'ease-out-quad'
+  });
+</script>
+<script>
+	window.onscroll = function(){
+		onScrollFunction()
+	};
+	function onScrollFunction(){
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    		document.getElementById("navbar1").style.top = "0";
+  		} else {
+    		document.getElementById("navbar1").style.top = "0px";
+  		}
+	}
+</script>
+<script src="bootstrap/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
 <!--login modal-->
+
 <div class="modal fade" id="LoginModal" role="dialog">
   <div class="modal-dialog modal-lg">
 	<div class="modal-content">
@@ -122,7 +107,7 @@
 		<h4 class="modal-title">Login</h4>
 	  </div>
 	  <div class="modal-body">
-		  <form name="loginForm"method="POST" action="http://ec2-35-177-168-144.eu-west-2.compute.amazonaws.com:3000/login">
+		  <form method="POST" action="http://ec2-35-177-168-144.eu-west-2.compute.amazonaws.com:3000/login">
 		      	<div class="rows">
 		        	<div class="col-sm-6">
 		          		<label for="exampleInputEmail1">Username</label>
@@ -149,31 +134,4 @@
 	  </div>
 	</div>
 </div>
-<script src="bootstrap/jquery.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<!-- Smooth Scrolling Animation -->
-<script src="dev/aos-master/dist/aos.js"></script>
-<script src="login.js"></script>
-
-<script>
-  AOS.init({
-    offset: 80,
-    once: true,
-    duration: 600,
-    easing: 'ease-in-out'
-  });
-</script>
-<script>
-	window.onscroll = function(){
-		onScrollFunction()
-	};
-	function onScrollFunction(){
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    		document.getElementById("navbar1").style.top = "0";
-  		} else {
-    		document.getElementById("navbar1").style.top = "0px";
-  		}
-	}
-</script>
-</body>
 </html>
