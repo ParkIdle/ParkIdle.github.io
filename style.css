@@ -225,7 +225,11 @@ body {
     margin: 0 5% 0 5%;
 }
 
-.container-fluid .rows{
+#mobile{
+    padding: 0px 0px 0px 0px;
+}
+
+.container-fluid .hidden-xs .rows{
     padding: 10px 50px 100px 50px;
 }
 
