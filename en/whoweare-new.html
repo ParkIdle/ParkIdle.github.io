@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<style>
+@font-face {
+    font-family: "Exo 2";
+    src: url("../res/fonts/Exo2-Medium.otf") format("opentype");
+}
+
+.font-exo {
+    font-family: "Exo 2",serif;
+    font-size: 24px;
+}
+
+.site-header a {
+    color:black;
+}
+
+.site-header a:hover {
+  color: black;
+  border-bottom: 2px solid #EFAC56;
+  text-decoration: none;
+}
+
+.site-header .selected {
+    color: #EFAC56;
+    border-bottom: 2px solid #EFAC56;
+    text-decoration: none;
+}
+</style>
+<script src="../bootstrap/jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll > 80){
+            $(".site-header").css("background","rgba(0, 0, 0, .70)");
+            $(".site-header a").css("color","white");
+            $(".site-header .selected").css("color","#EFAC56");
+            $(".site-header a").css("transition","ease-in-out color .15s")
+            $(".site-header").css("transition","all 0.3s ease-in")
+        }
+        else if(scroll < 10) {
+            $(".site-header a").css("color","black");
+            $(".site-header .selected").css("color","#EFAC56");
+            $(".site-header").css("background","rgba(0, 0, 0, 0)");
+        }
+    });
+    if($(window).width() < 768){
+        window.location.replace("index-new.html");
+    }
+});
+</script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../res/favicon-32x32.png" type="image/x-icon" />
+
+    <title>ParkIdle - Chi Siamo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="font-exo">
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between" >
+        <a class="py-2 d-none d-md-inline-block" href="index-new.html">Home</a>
+        <a class="py-2 d-none d-md-inline-block" href="project-new.html">Il Progetto</a>
+        <a class="py-2 d-none d-md-inline-block selected" href="whoweare-new.html">Chi siamo</a>
+        <a class="py-2 d-none d-md-inline-block" href="beta.html">Iscriviti alla Beta!</a>
+      </div>
+    </nav>
+    <div class="d-flex flex-md-equal w-100 my-md-3 pl-3">
+      <div class="rounded bg-danger mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+          <img class="rounded-circle" src="../res/staffa2.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Simone Staffa</h2>
+          <p>MVP</p>
+          <p>
+              <a href="https://www.facebook.com/simone.staffa"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/_er_lim/"><i class="fab fa-instagram"></i></a>
+          </p>
+      </div>
+      <div class="rounded bg-info mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+          <img class="rounded-circle" src="../res/andrea.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Andrea Misuraca</h2>
+          <p>Social-addicted</p>
+          <p>
+              <a href="https://www.facebook.com/andreamisu666"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/instamisu/"><i class="fab fa-instagram"></i></a>
+          </p>
+      </div>
+    </div>
+
+    <div class="d-md-flex justify-content-around flex-md-equal mw-100 my-md-3 pl-md-3">
+      <div class="rounded bg-success mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+          <img class="rounded-circle" src="../res/alessio2.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Alessio Cesaretti</h2>
+          <p>Hair-power</p>
+          <p>
+              <a href="https://www.facebook.com/cesaretti.alessio"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/halp_ph/"><i class="fab fa-instagram"></i></a>
+          </p>
+      </div>
+      <div class="rounded bg-warning mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center w-100 text-white overflow-hidden">
+          <img class="rounded-circle" src="../res/silvestri.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Simone Silvestri</h2>
+          <p>Gangsta</p>
+          <p>
+              <a href="https://www.facebook.com/Simonesilv96"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/simonesilvo/"><i class="fab fa-instagram"></i></a>
+          </p>
+      </div>
+    </div>
+</body>
+<script src="../bootstrap/jquery.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script defer src="../fontawesome-free-5.0.4/svg-with-js/js/fontawesome-all.js"></script>
+</html>

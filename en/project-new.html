@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<style>
+@font-face {
+    font-family: "Exo 2";
+    src: url("../res/fonts/Exo2-Medium.otf") format("opentype");
+}
+
+.font-exo {
+    font-family: "Exo 2",serif;
+    font-size: 24px;
+}
+
+.site-header a {
+    color:black;
+}
+
+.site-header a:hover {
+  color: black;
+  border-bottom: 2px solid #5FB760;
+  text-decoration: none;
+}
+
+.site-header .selected {
+    color: #5FB760;
+    border-bottom: 2px solid #5FB760;
+    text-decoration: none;
+}
+
+</style>
+<script src="../bootstrap/jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll > 80){
+            $(".site-header").css("background","rgba(0, 0, 0, .70)");
+            $(".site-header a").css("color","white");
+            $(".site-header .selected").css("color","#5FB760");
+            $(".site-header a").css("transition","ease-in-out color .15s")
+            $(".site-header").css("transition","all 0.3s ease-in")
+        }
+        else if(scroll < 10) {
+            $(".site-header a").css("color","black");
+            $(".site-header .selected").css("color","#5FB760");
+            $(".site-header").css("background","rgba(0, 0, 0, 0)");
+        }
+    });
+    if($(window).width() < 768){
+        window.location.replace("index-new.html");
+    }
+});
+</script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../res/favicon-32x32.png" type="image/x-icon" />
+    <script defer src="../fontawesome-free-5.0.4/svg-with-js/js/fontawesome-all.js"></script>
+
+
+    <title>ParkIdle - Il Progetto</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="font-exo">
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between" >
+        <a class="py-2 d-none d-md-inline-block" href="index-new.html">Home</a>
+        <a class="py-2 d-none d-md-inline-block selected" href="project-new.html">Il Progetto</a>
+        <a class="py-2 d-none d-md-inline-block" href="whoweare-new.html">Chi siamo</a>
+        <a class="py-2 d-none d-md-inline-block" href="beta.html">Iscriviti alla Beta!</a>
+      </div>
+    </nav>
+    <div class="container w-100 h-100 mt-3">
+        <h1 class="text-center" style="font-size:100px;">Cosa è ParkIdle?</font></h1>
+        <p class="text-center mr-5 ml-5" style="font-size:24px;">
+            <b>ParkIdle</b> è un progetto universitario di 4 studenti di Ingegneria Informatica presso La Sapienza di Roma.<br />
+            L'idea nasce dalla problematica quotidiana di ognuno di noi e dei nostri concittadini nel trovare parcheggio senza sprecare <b>tempo</b> e <b>risorse</b>.
+            La nostra applicazione infatti permette di vedere su una mappa, i parcheggi vicino a te che si sono liberati di recente.
+            Il meccanismo è totalmente <b>automatizzato</b>, l'unica cosa che devi fare è mantenere l'App <b>sempre attiva</b>, in modo da aiutare
+            gli altri utenti a trovare parcheggio. Infatti ogni utente che usa ParkIdle, condivide con il sistema l'uscita o l'entrata
+            di un parcheggio. Inoltre si ha la possiblità di avviare la <b>navigazione</b> verso il parcheggio che preferisci, semplicemente cliccandoci.
+            <br />
+            <i class="text-primary mt-5 mr-5 mb-5 fas fa-hourglass-start fa-5x"></i>
+            <i class="text-success mt-5 mr-5 mb-5 fas fa-street-view fa-5x"></i>
+            <i class="text-info mt-5 mr-5 mb-5 fas fa-users fa-5x"></i>
+            <br /><b>La chiave del nostro servizio sono gli utenti</b>:<br /> più utenti usano ParkIdle, più eventi di uscita/entrata saranno resi noti, più parcheggi
+            saranno mostrati sulla mappa.
+        </p>
+    </div>
+</body>
+<script src="../bootstrap/jquery.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</html>

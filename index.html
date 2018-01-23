@@ -1,35 +1,72 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 <style>
-
 @font-face {
     font-family: "Exo 2";
-    src: url("../res/fonts/Exo2-Thin.otf") format("opentype");
+    src: url("../res/fonts/Exo2-Medium.otf") format("opentype");
 }
 
-body{
-    background-image: url('res/index-background.png');
-    background-size: cover;
-    background-attachment: fixed;
-    scroll-behavior: auto;
+.font-exo {
     font-family: "Exo 2",serif;
-    color:white;
-    text-align: center;
+    font-size: 24px;
 }
 </style>
-<head>
-</head>
-<body style="">
-    <div style="display: block; margin-top: 50px;">
-        <h1>Choose language: <br /></h1>
-        <a href="https://parkidle.github.io/it/index.html"><img src="res/it2.png" style="width: 240; height: 128;"/></a>
-        <a href="https://parkidle.github.io/en/index.html"><img src="res/en2.png" style="width: 240; height: 128;"/></a>
-    </div>
+<script src="bootstrap/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#eng").click(function(){
+            window.alert("Coming soon!");
+        })
+    })
+</script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <div style="font-size: 20px;">
-        <br />
-        <a href="https://github.com/ParkIdle/ParkIdle-Android"><font color="#79A348">GitHub Project</font></a>
-    </div>
+    <title>ParkIdle</title>
 
-</body>
+    <script defer src="fontawesome-free-5.0.4/svg-with-js/js/fontawesome-all.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="shortcut icon" href="res/favicon-32x32.png" type="image/x-icon" />
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  </head>
+
+  <body class="font-exo bg-faded">
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+          <img src="res/parkidle_off_trasp.png" style="width:1000px; heigth:auto;"/>
+          <p class="display-4">
+              Your favourite park finder!
+          </p>
+          <br />
+          <p class="display-5">
+              Selezione linguaggio / Select language
+          </p>
+          <a href="it/index-new.html">
+              <img src="res/it2.png" style="width:35px;" />
+          </a>
+          <a id="eng" href="">
+              <img src="res/en2.png" style="width:35px;" />
+          </a>
+          <hr />
+          <p class="text-center">
+              Github Project <br />
+              <a class="text-muted text-center" href="https://github.com/ParkIdle/ParkIdle-Android">
+                  <img src="res/GitHub-Mark-120px-plus.png" style="width:70px;" />
+              </a>
+          </p>
+      </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
 </html>

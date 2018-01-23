@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<style>
+
+.site-header a {
+    color:black;
+}
+
+.site-header a:hover {
+  color:black;
+  border-bottom: 2px solid #1377D5;
+  text-decoration: none;
+}
+
+.site-header .selected {
+    color: #1377D5;
+    border-bottom: 2px solid #1377D5;
+    text-decoration: none;
+}
+
+.overflow-hidden:{ overflow:hidden;}
+
+.box-shadow-login {
+     background-image: url("../res/login.png");
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: center;
+     background-attachment:local;
+     margin-bottom: 20px;
+     margin-top: -20px;
+ }
+
+.box-shadow-map {
+  background-image: url("../res/map.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment:local;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+.box-shadow-navigation{
+   background-image: url("../res/navigation1.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   background-attachment:local;
+   margin-bottom: 20px;
+   margin-top: -20px;
+}
+.box-shadow-head {
+    box-shadow: 0 .50rem .90rem rgba(0, 0, 0, 0.5);
+}
+@font-face {
+    font-family: "Exo 2";
+    src: url("../res/fonts/Exo2-Medium.otf") format("opentype");
+}
+
+.font-exo {
+    font-family: "Exo 2",serif;
+    font-size: 24px;
+}
+
+
+@keyframes move{
+0%{
+ transform: scale(1) rotate(0deg);
+}
+  50%{
+   transform: scale(1.3) rotate(0.1deg);
+
+  }
+  100%{
+   transform: scale(1) rotate(0deg);
+  }
+
+}
+
+#iscriviti {
+    background-color: rgba(95,183,96, .65);
+}
+
+#iscriviti:hover {
+    background-color: rgba(95,183,96,100);
+    transition: all 200ms ease-in;
+    transform: scale(1.3);
+}
+
+</style>
+<script src="../bootstrap/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#iscriviti").css("animation","move 1s 1 ease-in-out");
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if(scroll > 80){
+                $(".site-header").css("background","rgba(0, 0, 0, .70)");
+                $(".site-header a").css("color","white");
+                $(".site-header .selected").css("color","#1377D5");
+                $(".site-header a").css("transition","ease-in-out color .15s")
+                $(".site-header").css("transition","all 0.3s ease-in")
+            }
+            else if(scroll < 10) {
+                $(".site-header a").css("color","black");
+                $(".site-header .selected").css("color","#1377D5");
+                $(".site-header").css("background","rgba(0, 0, 0, 0)");
+            }
+        });
+
+        $("ul a").click(function(){
+            var select = $(this).html();
+            if(select.includes("Home")){
+                window.scrollTo(0,0);
+            }
+            if(select.includes("Il Progetto")){
+                window.scrollTo(0,1691.5);
+            }
+            if(select.includes("Chi siamo")){
+                window.scrollTo(0,2301.5);
+            }
+            if(select.includes("Iscriviti alla Beta!")){
+                window.scrollTo(0,2924);
+            }
+        });
+    });
+</script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../res/favicon-32x32.png" type="image/x-icon" />
+
+    <title>ParkIdle - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script defer src="../fontawesome-free-5.0.4/svg-with-js/js/fontawesome-all.js"></script>
+
+    <!-- Custom styles for this template -->
+
+</head>
+<body class="font-exo">
+    <!-- Computer + Tablet (XL - L - M - S Devices) -->
+    <div class="hidden-sm-down">
+        <nav class="site-header sticky-top py-1">
+          <div class="container d-flex flex-column flex-md-row justify-content-between" >
+            <a class="py-2 d-none d-md-inline-block selected" href="index-new.html">Home</a>
+            <a class="py-2 d-none d-md-inline-block" href="project-new.html">Il Progetto</a>
+            <a class="py-2 d-none d-md-inline-block" href="whoweare-new.html">Chi siamo</a>
+            <a class="py-2 d-none d-md-inline-block" href="beta.html">Iscriviti alla Beta!</a>
+          </div>
+        </nav>
+
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <img src="../res/parkidle_off_trasp.png" style="width:600px; heigth:auto;"/>
+        </div>
+        <div class="col-md-5 mx-auto">
+          <a id="iscriviti" class="btn btn-lg btn-block btn-outline-success text-success font-weight-bold" style="color: #50AF55; text-shadow: 1px 1px black;" href="beta.html">Partecipa alla Beta!</a>
+        </div>
+
+        <div class="d-flex flex-md-equal w-100 my-md-3 pl-3" >
+          <div class="bg-danger mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+            <div class="my-3 p-3">
+              <h2 class="display-5">Accedi con Google o Facebook</h2>
+              <p class="lead">Oppure crea un account ParkIdle</p>
+            </div>
+            <div class="bg-dark box-shadow-login mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+          </div>
+          <div class="bg-info mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+              <h2 class="display-5">Osserva i parcheggi sulla mappa</h2>
+              <p class="lead">Il bianco indica che è recente, il <font color="red">rosso</font> è di 10 minuti fa</p>
+            </div>
+            <div class="bg-light box-shadow-map mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-md-equal w-100 my-md-3 pl-3">
+          <div class="bg-success mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+            <div class="my-3 p-3">
+              <h2 class="display-5">Clicca sul parcheggio più vicino a te</h2>
+              <p class="lead">Verifica se è a pagamento o se è libero</p>
+            </div>
+            <div class="bg-dark box-shadow-map mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+          </div>
+          <div class="bg-warning mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center w-100 text-white overflow-hidden">
+            <div class="my-3 py-3">
+              <h2 class="display-5">Avvia la navigazione</h2>
+              <p class="lead">Non è mai stato cosi semplice trovare parcheggio</p>
+            </div>
+            <div class="bg-light box-shadow-navigation mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+          </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+          <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center overflow-hidden">
+            <div class="my-3 p-3">
+              <h2 class="display-5">Lascia l'App attiva in background</h2>
+              <p class="lead">Aiuterai gli altri utenti a trovare parcheggio!</p>
+            </div>
+            <i class="text-info text-center mr-5 fas fa-power-off fa-5x"></i>
+            <i class="text-info text-center fas fa-trophy fa-5x"></i>
+            <div class="bg-white box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- Mobile (XS Devices) -->
+    <div class="hidden-md-up">
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <img src="../res/parkidle_off_trasp.png" style="width:300px;"/>
+        </div>
+
+        <div class="container d-flex flex-column text-dark flex-md-row justify-content-between" >
+            <ul class="text-success text-center">
+                <a class="text-primary py-2 d-md-inline-block">Home</a><br />
+                <a class="text-success py-2 d-md-inline-block">Il Progetto</a><br />
+                <a class="text-warning py-2 d-md-inline-block">Chi siamo</a><br />
+                <a class="text-danger py-2 d-md-inline-block" >Iscriviti alla Beta!</a><br />
+            </ul>
+        </div>
+
+        <div class="d-flex flex-md-equal w-100" >
+          <div class="bg-danger mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+            <div class="my-3 p-3">
+              <h5 class="display-5">Accedi con Google o Facebook</h5>
+              <p class="lead" style="font-size:16px;">Oppure crea un account ParkIdle</p>
+            </div>
+            <div class="bg-dark box-shadow-login mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+          </div>
+          <div class="bg-info mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+              <h5 class="display-5">Osserva i parcheggi sulla mappa</h5>
+              <p class="lead" style="font-size:16px;">Il bianco indica che è recente, il <font color="red">rosso</font> è di 10 minuti fa</p>
+            </div>
+            <div class="bg-light box-shadow-map mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-md-equal w-100" >
+            <div class="bg-success mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+              <div class="my-3 p-3">
+                <h5 class="display-5">Clicca sul parcheggio più vicino a te</h5>
+                <p class="lead" style="font-size:16px;">Verifica se è a pagamento o se è libero</p>
+              </div>
+              <div class="bg-dark box-shadow-map mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            </div>
+            <div class="bg-warning mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center w-100 text-white overflow-hidden">
+              <div class="my-3 py-3">
+                <h5 class="display-5">Avvia la navigazione</h5>
+                <p class="lead" style="font-size:16px;">Non è mai stato cosi semplice trovare parcheggio</p>
+              </div>
+              <div class="bg-light box-shadow-navigation mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            </div>
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+          <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center overflow-hidden">
+            <div class="my-3 p-3">
+              <h5 class="display-5">Lascia l'App attiva in background</h5>
+              <p class="lead" style="font-size:16px;">Aiuterai gli altri utenti a trovare parcheggio!</p>
+            </div>
+            <i class="text-info text-center mr-5 fas fa-power-off fa-5x"></i>
+            <i class="text-info text-center fas fa-trophy fa-5x"></i>
+            <div class="bg-white box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+          </div>
+        </div>
+
+        <!-- Il Progetto -->
+        <div class="container w-100 h-100 mt-3">
+            <h1 class="text-center" style="font-size:60px;">Cosa è ParkIdle?</font></h1>
+            <p class="text-center mr-5 ml-5" style="font-size:16px;">
+                <b>ParkIdle</b> è un progetto universitario di 4 studenti di Ingegneria Informatica presso La Sapienza di Roma.<br />
+                L'idea nasce dalla problematica quotidiana di ognuno di noi e dei nostri concittadini nel trovare parcheggio senza sprecare <b>tempo</b> e <b>risorse</b>.
+                La nostra applicazione infatti permette di vedere su una mappa, i parcheggi vicino a te che si sono liberati di recente.
+                Il meccanismo è totalmente <b>automatizzato</b>, l'unica cosa che devi fare è mantenere l'App <b>sempre attiva</b>, in modo da aiutare
+                gli altri utenti a trovare parcheggio. Infatti ogni utente che usa ParkIdle, condivide con il sistema l'uscita o l'entrata
+                di un parcheggio. Inoltre si ha la possiblità di avviare la <b>navigazione</b> verso il parcheggio che preferisci, semplicemente cliccandoci.
+                <br />
+                <i class="text-primary mt-5 mr-5 mb-5 fas fa-hourglass-start fa-5x"></i>
+                <i class="text-success mt-5 mr-5 mb-5 fas fa-street-view fa-5x"></i>
+                <i class="text-info mt-5 mr-5 mb-5 fas fa-users fa-5x"></i>
+                <br /><b>La chiave del nostro servizio sono gli utenti</b>:<br /> più utenti usano ParkIdle, più eventi di uscita/entrata saranno resi noti, più parcheggi
+                saranno mostrati sulla mappa.
+            </p>
+        </div>
+
+        <hr />
+
+        <!-- Chi Siamo -->
+        <h1 class="text-center" style="font-size:60px;">Chi Siamo</font></h1>
+        <div class="d-flex flex-md-equal w-100" style="font-size: 16px;">
+            <div class="rounded bg-danger mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+                  <img class="rounded-circle" src="../res/staffa2.jpg" alt="Generic placeholder image" width="140" height="140">
+                  <h5>Simone Staffa</h5>
+                  <p>MVP</p>
+                  <p>
+                      <a href="https://www.facebook.com/simone.staffa"><i class="fab fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/_er_lim/"><i class="fab fa-instagram"></i></a>
+                  </p>
+            </div>
+            <div class="rounded bg-info mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+                  <img class="rounded-circle" src="../res/andrea.jpg" alt="Generic placeholder image" width="140" height="140">
+                  <h5>Andrea Misuraca</h5>
+                  <p>Social-addicted</p>
+                  <p>
+                      <a href="https://www.facebook.com/andreamisu666"><i class="fab fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/instamisu/"><i class="fab fa-instagram"></i></a>
+                  </p>
+            </div>
+        </div>
+        <div class="d-flex flex-md-equal w-100" style="font-size: 16px;">
+            <div class="rounded bg-success mr-md-3 pt-3 px-3 pt-md-5 px-md-5 w-100 text-center text-white overflow-hidden">
+                <img class="rounded-circle" src="../res/alessio2.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h5>Alessio Cesaretti</h5>
+                <p>Hair-power</p>
+                <p>
+                    <a href="https://www.facebook.com/cesaretti.alessio"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/halp_ph/"><i class="fab fa-instagram"></i></a>
+                </p>
+            </div>
+            <div class="rounded bg-warning mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center w-100 text-white overflow-hidden">
+                <img class="rounded-circle" src="../res/silvestri.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h5>Simone Silvestri</h5>
+                <p>Gangsta</p>
+                <p>
+                    <a href="https://www.facebook.com/Simonesilv96"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/simonesilvo/"><i class="fab fa-instagram"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+          <main role="main" class="inner cover text-center">
+            <h1 class="cover-heading" style="font-size:60px;">
+                Campagna di lancio
+                <i class="text-danger fas fa-rocket"></i>
+            </h1>
+            <p class="display-5 text-center">La Beta di ParkIdle sta per uscire!<br />Vuoi prender parte alla rivoluzione? <br />Vuoi essere uno
+                dei primi utenti di ParkIdle? <br /><br />
+            </p>
+            <div class="container pb-5">
+        		<img id="logo" src="../res/login.png" style="padding-right: 10px; width:24%; height:24%;"></img>
+        		<img id="logo" src="../res/sidebar.png" style="padding-right: 10px; width:24%; height:24%;"></img>
+        		<img id="logo" src="../res/map.png" style="padding-right: 10px; width:24%; height:24%;"></img>
+        		<img id="logo" src="../res/navigation1.png" style="width:23.3%; height:23.3%;"></img>
+        	</div>
+            <p class="display-5 pt-3">
+                Compila il sondaggio ed iscriviti!
+            </p>
+            <a class="btn btn-lg btn-outline-success text-success font-weight-bold" href="https://goo.gl/forms/ceqENTk8bMpYxytk2">Beta Parkidle</a>
+            <br />
+            <br />
+            <p class="display-5 text-center">Non conosci ParkIdle? </p>
+            <a class="btn btn-lg btn-outline-warning text-warning font-weight-bold" href="project-new.html">Clicca qui</a>
+          </main>
+
+        </div>
+    </div>
+</body>
+  <script src="../bootstrap/jquery.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</html>

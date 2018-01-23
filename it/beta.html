@@ -1,0 +1,116 @@
+<!doctype html>
+<style>
+@font-face {
+    font-family: "Exo 2";
+    src: url("../res/fonts/Exo2-Medium.otf") format("opentype");
+}
+
+.font-exo {
+    font-family: "Exo 2",serif;
+    font-size: 24px;
+}
+
+
+.site-header a {
+    color:black;
+}
+
+.site-header a:hover {
+  color: black;
+  border-bottom: 2px solid #D75452;
+  text-decoration: none;
+}
+
+.site-header .selected {
+    color: #D75452;
+    border-bottom: 2px solid #D75452;
+    text-decoration: none;
+}
+</style>
+<script src="../bootstrap/jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll > 80){
+            $(".site-header").css("background","rgba(0, 0, 0, .70)");
+            $(".site-header a").css("color","white");
+            $(".site-header .selected").css("color","#D75452");
+            $(".site-header a").css("transition","ease-in-out color .15s")
+            $(".site-header").css("transition","all 0.3s ease-in")
+        }
+        else if(scroll < 10) {
+            $(".site-header a").css("color","black");
+            $(".site-header .selected").css("color","#D75452");
+            $(".site-header").css("background","rgba(0, 0, 0, 0)");
+        }
+    });
+    if($(window).width() < 768){
+        window.location.replace("index-new.html");
+    }
+});
+</script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ParkIdle - Beta</title>
+
+    <script defer src="../fontawesome-free-5.0.4/svg-with-js/js/fontawesome-all.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="shortcut icon" href="../res/favicon-32x32.png" type="image/x-icon" />
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  </head>
+
+  <body class="font-exo text-center">
+      <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between" >
+          <a class="py-2 d-none d-md-inline-block" href="index-new.html">Home</a>
+          <a class="py-2 d-none d-md-inline-block" href="project-new.html">Il Progetto</a>
+          <a class="py-2 d-none d-md-inline-block" href="whoweare-new.html">Chi siamo</a>
+          <a class="py-2 d-none d-md-inline-block selected" href="beta.html">Iscriviti alla Beta!</a>
+        </div>
+      </nav>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading" style="font-size:100px;">
+            Campagna di lancio
+            <i class="text-danger fas fa-rocket"></i>
+        </h1>
+        <p class="display-4 text-center">La Beta di ParkIdle sta per uscire!<br />Vuoi prender parte alla rivoluzione? <br />Vuoi essere uno
+            dei primi utenti di ParkIdle? <br /><br />
+        </p>
+        <div class="container pb-5">
+    		<img id="logo" src="../res/login.png" style="padding-right: 10px; width:24%; height:24%;"></img>
+    		<img id="logo" src="../res/sidebar.png" style="padding-right: 10px; width:24%; height:24%;"></img>
+    		<img id="logo" src="../res/map.png" style="padding-right: 10px; width:24%; height:24%;"></img>
+    		<img id="logo" src="../res/navigation1.png" style="width:23.3%; height:23.3%;"></img>
+    	</div>
+        <p class="display-4 pt-3">
+            Compila il sondaggio ed iscriviti!
+        </p>
+        <a class="btn btn-lg btn-outline-success text-success font-weight-bold" href="https://goo.gl/forms/ceqENTk8bMpYxytk2">Beta Parkidle</a>
+        <br />
+        <br />
+        <p class="display-5 text-center">Non conosci ParkIdle? </p>
+        <a class="btn btn-lg btn-outline-warning text-warning font-weight-bold" href="project-new.html">Clicca qui</a>
+      </main>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../bootstrap/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
