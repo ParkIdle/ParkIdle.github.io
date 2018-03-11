@@ -241,7 +241,7 @@ img {
 
 #benefits1,
 #benefits2 { font-size: 14px; }
- 
+
 } @media (max-width: 767px) {
 
 .img-block-2col { text-align: center; }
@@ -1011,7 +1011,7 @@ footer {
 
 /* ===[ Responsive all mobile sizes ]=== */
 
-@media (max-width: 979px) { 
+@media (max-width: 979px) {
   .newsletter-form {
       min-width: 0
   }
@@ -1155,7 +1155,7 @@ footer {
 
 /* ===[ Responsive just mobile portrait ]=== */
 
-@media (max-width: 479px) { 
+@media (max-width: 479px) {
   header .buttons-wrapper .button.button-stripe {
       margin-left: 0
   }
@@ -1166,7 +1166,7 @@ footer {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .comments .tab-prev,
   .comments .tab-next,
   .button-download:after,
