@@ -584,6 +584,7 @@ header .buttons-wrapper .button-stripe {
     float: right
 }
 
+
 .header-wrapper {
     padding-top: 87px;
     max-width: 655px;
@@ -1011,7 +1012,7 @@ footer {
 
 /* ===[ Responsive all mobile sizes ]=== */
 
-@media (max-width: 979px) {
+@media (max-width: 767px) {
   .newsletter-form {
       min-width: 0
   }
