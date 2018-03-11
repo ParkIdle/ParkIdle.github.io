@@ -254,6 +254,8 @@ img {
 .screen-couple-right,
 .screen-couple-left { margin: 50px auto 0 auto; }
 
+}
+
 /*----------------------------------------------------------------------------------------
                                         DOWNLOAD
 ----------------------------------------------------------------------------------------*/
@@ -578,13 +580,8 @@ header .buttons-wrapper .button-stripe {
     margin-left: 14px
 }
 
-@media(min-width: 992px;){
-     .header-img {
-         width:300px;
-         height:603px;
-         margin-top:60px;
-         float: right
-     }
+.header-img {
+    float: right
 }
 
 .header-wrapper {
