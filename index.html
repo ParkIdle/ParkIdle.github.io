@@ -94,7 +94,7 @@
                         <p>Il tuo contributo è fondamentale per noi. Scarica, usa, parcheggia. Condividi la tua esperienza con più persone possibili. Nessuna rivoluzione
                         può essere fatta da soli.</p>
                         <div class="discover-button clearfix">
-                            <a href="#ios-subscribe" class="button button-download">
+                            <a id="download-ios" href="" class="button button-download">
                                 <span class="button-download-title">Download for</span>
                                 <span class="button-download-subtitle">Apple iOS</span>
                             </a>
@@ -224,5 +224,10 @@
     <script src="js/library.js"></script>
     <script src="js/script.js"></script>
     <script src="js/retina.js"></script>
+    <script>
+        $("#download-ios").on("click",function(){
+            window.alert("Siamo spiacenti. L'applicazione per iOS sarà presto disponibile!");
+        });
+    </script>
 </body>
 </html>
