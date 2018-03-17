@@ -236,10 +236,11 @@
                     return false;
                 }
                 else{
-                    e.preventDefault(); // don't submit multiple times
-                    this.submit(); // use the native submit method of the form element
                     window.alert("Grazie mille per il tuo interesse, ora che sei iscritto riceverai news e aggiornamenti sullo stato del nostro progetto.");
-                    $('#email-input').val(''); // blank the input
+                    e.preventDefault();
+                    this.submit();
+                    this.reset();
+                    return true;
                 }
             })
         });
