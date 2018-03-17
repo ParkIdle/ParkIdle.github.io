@@ -229,14 +229,16 @@
             $("#download-ios").on("click",function(){
                 window.alert("L'applicazione per iOS è in fase di sviluppo.\nIscriviti lasciando l'email, e sarai contattato non appena sarà disponibile.");
             });
-            $("#email-subscription").on("submit", function(){
+            $("#email-subscription").on("submit", function(e){
                 if($("#email-input").val().length == 0){
                     window.alert("Devi inserire la tua email.");
                     return false;
                 }
                 else{
                     window.alert("Grazie mille per il tuo interesse, ora che sei iscritto riceverai news e aggiornamenti sullo stato del nostro progetto.");
-                    $("#email-subscription")[0].reset();    
+                    e.preventDefault();
+                    $("#email-subscription")[0].submit();
+                    $("#email-subscription")[0].reset();
                     return true;
                 }
             })
