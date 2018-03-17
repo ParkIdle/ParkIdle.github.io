@@ -46,8 +46,9 @@
                     <div class="buttons-wrapper" style="margin-top:-10px;">
                         <a href="https://play.google.com/apps/testing/pi.parkidle" target="_blank"><img src="upload/google-play-badge_opt.png" style="width:230px; height:86px; margin-left:-15px;"/></a>
                         <div class="newsletter-form clearfix">
-                            <form method="POST" action="http://ec2-35-177-216-151.eu-west-2.compute.amazonaws.com:3000/iossubscribe" target="_blank">
-                                <input type="email" name="email" placeholder="john@doe.com" class="input-text">
+                            <iframe id="ifrm1" name="ifrm1" style="display:none"></iframe> <!-- Fa in modo che se mando la POST non apre una nuova finestra -->
+                            <form id="email-subscription" method="POST" action="http://ec2-35-177-216-151.eu-west-2.compute.amazonaws.com:3000/iossubscribe" target="ifrm1">
+                                <input id="email-input" type="email" name="email" placeholder="john@doe.com" class="input-text">
                                 <input type="submit" class="button" value="Iscriviti">
                             </form>
                         </div>
@@ -225,8 +226,20 @@
     <script src="js/script.js"></script>
     <script src="js/retina.js"></script>
     <script>
-        $("#download-ios").on("click",function(){
-            window.alert("Siamo spiacenti, L'applicazione per iOS sarà presto disponibile.\nLasciando l'email ti contatteremo non appena sarà pubblicata.");
+        $(document).ready(function(){
+            $("#download-ios").on("click",function(){
+                window.alert("L'applicazione per iOS è in fase di sviluppo.\nIscriviti lasciando l'email, e sarai contattato non appena sarà disponibile.");
+            });
+            $("#email-subscription").on("submit", function(){
+                if($("#email-input").val().length == 0){
+                    window.alert("Devi inserire la tua email.");
+                    return false;
+                }
+                else{
+                    window.alert("Grazie mille per il tuo interesse, ora che sei iscritto riceverai news e aggiornamenti sullo stato del nostro progetto.");
+                    location.reload();
+                }
+            })
         });
     </script>
 </body>
