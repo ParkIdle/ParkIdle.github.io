@@ -49,7 +49,7 @@
                             <iframe id="ifrm1" name="ifrm1" style="display:none"></iframe> <!-- Fa in modo che se mando la POST non apre una nuova finestra -->
                             <form id="email-subscription" method="POST" action="https://ec2-35-177-216-151.eu-west-2.compute.amazonaws.com:3000/iossubscribe" target="ifrm1">
                                 <input id="email-input" type="email" name="email" placeholder="john@doe.com" class="input-text">
-                                <input id="email-submit" type="submit" class="button" value="Iscriviti">
+                                <input type="submit" class="button" value="Iscriviti">
                             </form>
                         </div>
                         <!--<a href="#ios-subscribe" class="button button-stripe" style="margin-bottom: 14.5px;"> Clicca qui</a> -->
@@ -230,7 +230,7 @@
             $("#download-ios").on("click",function(){
                 window.alert("L'applicazione per iOS è in fase di sviluppo.\nIscriviti lasciando l'email, e sarai contattato non appena sarà disponibile.");
             });
-            $("#email-subscription").on("submit", function(){
+            $("#email-subscription").on("submit", function(e){
                 if($("#email-input").val().length == 0){
                     window.alert("Devi inserire la tua email.");
                     return false;
